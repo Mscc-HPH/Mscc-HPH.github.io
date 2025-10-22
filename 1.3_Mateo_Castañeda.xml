@@ -24,7 +24,7 @@
 
         <front>
             <div type="DramatisPersonae">
-                <head>The Persons Represented</head>
+                <caption>The Persons Represented</caption>
                 <castList>
                     <castItem xml:id="hamlet">
                         <role>Hamlet</role>
