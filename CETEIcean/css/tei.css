@@ -1,0 +1,72 @@
+body{
+    font-family:"Beau Rivage";
+    margin-left: 1cm;
+}
+
+tei-author {
+    color: darkred;
+    display: block;
+}
+
+tei-title {
+    display: block;
+    font-style: italic;
+    text-align: center;
+    font-size: xx-large;
+}
+
+tei-l {
+ display: block;
+}
+
+tei-caption{
+    display: block;
+    font-style: italic;
+    text-align: center;
+    color: blueviolet;
+    font-size:x-large;
+}
+
+tei-sp[lang="eng"]{
+    display: block;
+}
+
+tei-sp[lang="spa"]{
+    display: block;
+    display: none;
+
+}
+
+
+tei-stage[lang="eng"]  {
+    display: block;
+    color: purple;
+    font-size: larger;
+}
+
+tei-stage[lang="spa"]  {
+    display: block;
+    display: none;
+
+}
+
+tei-speaker {
+    display: block;
+    font-size: large;
+    text-decoration: underline;
+}
+
+tei-role {
+    display: block;
+    text-decoration: underline; 
+    font-size: larger;
+    color: darkred;
+}
+
+tei-roleDesc {
+    font-style: italic;
+}
+
+tei-castGroup {
+    display: block;
+}
