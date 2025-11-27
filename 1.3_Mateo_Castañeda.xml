@@ -2,842 +2,1173 @@
 <?xml-model href="https://raw.githubusercontent.com/nivaca/hamleodd/refs/heads/main/tei_sp.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="https://raw.githubusercontent.com/nivaca/hamleodd/refs/heads/main/tei_sp.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
-    <teiHeader>
-        <fileDesc>
-            <titleStmt>
-                <title>Hamlet</title>
-                <author>William Shakespeare</author>
-            </titleStmt>
-            <publicationStmt>
-                <p>Traducción realizada para la clase de 
-        Herramientas digitales para humanistas 2025-20
-                </p>
-            </publicationStmt>
-            <sourceDesc>
-                <p>Texto tomado del Second Quarto (                    <date>1604</date>)
-        de William Shakespeare 
-                </p>
-            </sourceDesc>
-        </fileDesc>
-    </teiHeader>
-    <text>
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>Hamlet</title>
+        <author>William Shakespeare</author>
+      </titleStmt>
+      <publicationStmt>
+        <p>Traducción realizada para la clase de 
+          Herramientas digitales para humanistas 2025-20
+        </p>
+      </publicationStmt>
+      <sourceDesc>
+        <p>Texto tomado del Second Quarto (<date>1604</date>)
+          de William Shakespeare 
+        </p>
+      </sourceDesc>
+    </fileDesc>
+  </teiHeader>
+  <text>
+    
+    <front>
+      <note>Para acceder a los cambios del texto critico tener en cuenta lo siguiente:
+      </note>
+      <note>El texto que se muestra es la versión Q2
+      </note>
+      <note>Al presionar la tecla F, podra acceder a los cambio del F1. Presionarla nuevamente lo regresara a la versión Q2   
+      </note>
+      <note>Al presionar la tecla Q, podra acceder a los cambio del Q1. Presionarla nuevamente lo regresara a la versión Q2
+      </note>
+      <div type="DramatisPersonae">
+        <caption>The Persons Represented</caption>
+        <castList>
+          <castItem xml:id="hamlet">
+            <role>Hamlet</role>
+            <roleDesc>Prince of Denmark</roleDesc>
+          </castItem>
+          <castItem xml:id="ghost">
+            <role>Ghost</role>
+            <roleDesc>of Hamlet’s father, the late King Hamlet of Denmark</roleDesc>
+          </castItem>
+          <castItem xml:id="claudius">
+            <role>King Claudius </role>
+            <roleDesc>of Denmark, brother of the late King</roleDesc>
+          </castItem>
+          <castItem xml:id="gertrude">
+            <role>Queen Gertrude</role>
+            <roleDesc>Hamlet’s mother and his father’s widow, now married to King Claudius</roleDesc>
+          </castItem>
+          <castItem xml:id="polonius">
+            <role>Polonius</role>
+            <roleDesc>King Claudius' councillor </roleDesc>
+          </castItem>
+          <castItem xml:id="laertes">
+            <role>Laertes</role>
+            <roleDesc>Polonius' son</roleDesc>
+          </castItem>
+          <castItem xml:id="ophelia">
+            <role>Ophelia</role>
+            <roleDesc>Polonius' daughter</roleDesc>
+          </castItem>
+          <castItem xml:id="reynaldo">
+            <role>Reynaldo</role>
+            <roleDesc>Polonius' man</roleDesc>
+          </castItem>
+          <castItem xml:id="followers">
+            <role>Followers</role>
+            <roleDesc>of Laertes</roleDesc>
+          </castItem>
+          <castItem xml:id="horatio">
+            <role>Horatio</role>
+            <roleDesc>Hamlet's friend and fellow student</roleDesc>
+          </castItem>
+          <castItem xml:id="rosencrantz">
+            <role>Rosencrantz</role>
+            <roleDesc>fellow student</roleDesc>
+          </castItem>
+          <castItem xml:id="guildenstern">
+            <role>Guildenstern</role>
+            <roleDesc>fellow student</roleDesc>
+          </castItem>
+          <castItem xml:id="voltemand">
+            <role>Voltemand</role>
+            <roleDesc>Danish ambassador to Norway</roleDesc>
+          </castItem>
+          <castItem xml:id="cornelius">
+            <role>Cornelius</role>
+            <roleDesc>Danish ambassador to Norway</roleDesc>
+          </castItem>
+          <castItem xml:id="barnardo">
+            <role>Barnardo</role>
+            <roleDesc>sentinel</roleDesc>
+          </castItem>
+          <castItem xml:id="francisco">
+            <role>Francisco</role>
+            <roleDesc>sentinel</roleDesc>
+          </castItem>
+          <castItem xml:id="marcelus">
+            <role>Marcelus</role>
+            <roleDesc>sentinel</roleDesc>
+          </castItem>
+          <castItem xml:id="osric">
+            <role>Osric</role>
+            <roleDesc>a courtier</roleDesc>
+          </castItem>
+          <castGroup xml:id="players">
+            <roleDesc>Players</roleDesc>
+            <castItem xml:id="prologue">
+              <role>Prologue</role>
+            </castItem>
+            <castItem xml:id="playerking">
+              <role>Player King</role>
+            </castItem>
+            <castItem xml:id="playerqueen">
+              <role>Player Queen</role>
+            </castItem>
+            <castItem xml:id="lucianus">
+              <role>Lucianus</role>
+            </castItem>
+          </castGroup>
+          <castItem xml:id="gravedigger">
+            <role>Gravedigger</role>
+            <roleDesc>a clown</roleDesc>
+          </castItem>
+          <castItem xml:id="secondman">
+            <role>Second man</role>
+            <roleDesc>another clown</roleDesc>
+          </castItem>
+          <castItem xml:id="priest">
+            <role>Priest</role>
+          </castItem>
+          <castItem xml:id="lords">
+            <role>Lords</role>
+          </castItem>
+          <castItem xml:id="gentlemen">
+            <role>Gentlemen</role>
+          </castItem>
+          <castItem xml:id="messengers">
+            <role>Messengers</role>
+          </castItem>
+          <castItem xml:id="sailors">
+            <role>Sailors</role>
+          </castItem>
+          <castItem xml:id="fortinbras">
+            <role>Fortinbras</role>
+            <roleDesc>Prince of Norway</roleDesc>
+          </castItem>
+          <castItem xml:id="capitan">
+            <role>Capitan</role>
+            <roleDesc>in Norwegian army</roleDesc>
+          </castItem>
+          <castItem xml:id="ambassadors">
+            <role>Ambassadors</role>
+            <roleDesc>from England</roleDesc>
+          </castItem>
+          <castItem xml:id="attendants">
+            <role>Attendants</role>
+          </castItem>
+          <castItem xml:id="courtiers">
+            <role>Courtiers</role>
+          </castItem>
+          <castItem xml:id="trumpets">
+            <role>Trumpets</role>
+          </castItem>
+          <castItem xml:id="kettledrums">
+            <role>Kettledrums</role>
+          </castItem>
+          <castItem xml:id="drums">
+            <role>Drums</role>
+          </castItem>
+          <castItem xml:id="officers">
+            <role>Officers</role>
+          </castItem>
+          <castItem xml:id="norw_soldiers">
+            <role>Norwegian soldiers</role>
+          </castItem>
+        </castList>
+      </div>
+    </front>
+    <body>
+      <div type="acto" n="1">
+        <div type="escena" n="3">
+          <head>
+            <supplied>1.3</supplied>
+          </head>
+          <stage xml:lang="eng" xml:id="g4n2k7m9q1_eng" corresp="#g4n2k7m9q1_spa">Enter Laertes, and Ophelia 
+            <app>
+              <lem wit="#Q2">his sister.</lem>
+              <rdg wit="#F1 #Q1" type="variation-absent"></rdg>
+            </app>
+          </stage>
+          
+          
+          <app xml:id="ghm_314_ghc">
+            <lem wit="#Q2 #Q1">
+              <sp who="#laertes" xml:lang="eng" xml:id="p7c3l9x2e8_eng" corresp="#p7c3l9x2e8_spa" next="#itf_2b4_ghc_eng">
+                <speaker>Laertes</speaker>
+                <l>My necessaries are inbarked. 
+                  <app>
+                    <lem wit="#Q2">Farewell.</lem>
+                    <rdg wit="#F1">I must aboord,</rdg>
+                  </app> 
+                </l>
+              </sp>
+            </lem>
+            <rdg wit="#Q1">
+              <sp who="#laertes" xml:lang="eng" xml:id="p7c3l9x2e4_eng" corresp="#p7c3l9x2e4_spa">
+                <speaker>Laertes</speaker>
+                <l>My necessaries are inbarked, I must aboord,</l>
+                <l>But ere I part, marke what I by to thee:</l>
+                <l>I fee Prince Hamlet makes a fhew of loue</l>
+                <l>Beware Ofelta, do not trust his vowes,</l>
+                <l>Perhaps he loues you now, and now his tongue,</l>
+                <l>Speakes from his heart, but yet take heed my sister,</l>
+                <l>The Chariest maide is prodigal! enough,</l>
+                <l>If she vnmaske hir beautie to the Moone.</l>
+                <l>Vertue it selfe scapes not calumnious thoughts,</l>
+                <l>Belieu't Ofetia, therefore keepe a loofe</l>
+                <l>Lest that he trip thy honor and thy fame.</l>
+              </sp>
 
-        <front>
-            <div type="DramatisPersonae">
-                <caption>The Persons Represented</caption>
-                <castList>
-                    <castItem xml:id="hamlet">
-                        <role>Hamlet</role>
-                        <roleDesc>Prince of Denmark</roleDesc>
-                    </castItem>
-                    <castItem xml:id="ghost">
-                        <role>Ghost</role>
-                        <roleDesc>of Hamlet’s father, the late King Hamlet of Denmark</roleDesc>
-                    </castItem>
-                    <castItem xml:id="claudius">
-                        <role>King Claudius </role>
-                        <roleDesc>of Denmark, brother of the late King</roleDesc>
-                    </castItem>
-                    <castItem xml:id="gertrude">
-                        <role>Queen Gertrude</role>
-                        <roleDesc>Hamlet’s mother and his father’s widow, now married to King Claudius</roleDesc>
-                    </castItem>
-                    <castItem xml:id="polonius">
-                        <role>Polonius</role>
-                        <roleDesc>King Claudius' councillor </roleDesc>
-                    </castItem>
-                    <castItem xml:id="laertes">
-                        <role>Laertes</role>
-                        <roleDesc>Polonius' son</roleDesc>
-                    </castItem>
-                    <castItem xml:id="ophelia">
-                        <role>Ophelia</role>
-                        <roleDesc>Polonius' daughter</roleDesc>
-                    </castItem>
-                    <castItem xml:id="reynaldo">
-                        <role>Reynaldo</role>
-                        <roleDesc>Polonius' man</roleDesc>
-                    </castItem>
-                    <castItem xml:id="followers">
-                        <role>Followers</role>
-                        <roleDesc>of Laertes</roleDesc>
-                    </castItem>
-                    <castItem xml:id="horatio">
-                        <role>Horatio</role>
-                        <roleDesc>Hamlet's friend and fellow student</roleDesc>
-                    </castItem>
-                    <castItem xml:id="rosencrantz">
-                        <role>Rosencrantz</role>
-                        <roleDesc>fellow student</roleDesc>
-                    </castItem>
-                    <castItem xml:id="guildenstern">
-                        <role>Guildenstern</role>
-                        <roleDesc>fellow student</roleDesc>
-                    </castItem>
-                    <castItem xml:id="voltemand">
-                        <role>Voltemand</role>
-                        <roleDesc>Danish ambassador to Norway</roleDesc>
-                    </castItem>
-                    <castItem xml:id="cornelius">
-                        <role>Cornelius</role>
-                        <roleDesc>Danish ambassador to Norway</roleDesc>
-                    </castItem>
-                    <castItem xml:id="barnardo">
-                        <role>Barnardo</role>
-                        <roleDesc>sentinel</roleDesc>
-                    </castItem>
-                    <castItem xml:id="francisco">
-                        <role>Francisco</role>
-                        <roleDesc>sentinel</roleDesc>
-                    </castItem>
-                    <castItem xml:id="marcelus">
-                        <role>Marcelus</role>
-                        <roleDesc>sentinel</roleDesc>
-                    </castItem>
-                    <castItem xml:id="osric">
-                        <role>Osric</role>
-                        <roleDesc>a courtier</roleDesc>
-                    </castItem>
-                    <castGroup xml:id="players">
-                        <roleDesc>Players</roleDesc>
-                        <castItem xml:id="prologue">
-                            <role>Prologue</role>
-                        </castItem>
-                        <castItem xml:id="playerking">
-                            <role>Player King</role>
-                        </castItem>
-                        <castItem xml:id="playerqueen">
-                            <role>Player Queen</role>
-                        </castItem>
-                        <castItem xml:id="lucianus">
-                            <role>Lucianus</role>
-                        </castItem>
-                    </castGroup>
-                    <castItem xml:id="gravedigger">
-                        <role>Gravedigger</role>
-                        <roleDesc>a clown</roleDesc>
-                    </castItem>
-                    <castItem xml:id="secondman">
-                        <role>Second man</role>
-                        <roleDesc>another clown</roleDesc>
-                    </castItem>
-                    <castItem xml:id="priest">
-                        <role>Priest</role>
-                    </castItem>
-                    <castItem xml:id="lords">
-                        <role>Lords</role>
-                    </castItem>
-                    <castItem xml:id="gentlemen">
-                        <role>Gentlemen</role>
-                    </castItem>
-                    <castItem xml:id="messengers">
-                        <role>Messengers</role>
-                    </castItem>
-                    <castItem xml:id="sailors">
-                        <role>Sailors</role>
-                    </castItem>
-                    <castItem xml:id="fortinbras">
-                        <role>Fortinbras</role>
-                        <roleDesc>Prince of Norway</roleDesc>
-                    </castItem>
-                    <castItem xml:id="capitan">
-                        <role>Capitan</role>
-                        <roleDesc>in Norwegian army</roleDesc>
-                    </castItem>
-                    <castItem xml:id="ambassadors">
-                        <role>Ambassadors</role>
-                        <roleDesc>from England</roleDesc>
-                    </castItem>
-                    <castItem xml:id="attendants">
-                        <role>Attendants</role>
-                    </castItem>
-                    <castItem xml:id="courtiers">
-                        <role>Courtiers</role>
-                    </castItem>
-                    <castItem xml:id="trumpets">
-                        <role>Trumpets</role>
-                    </castItem>
-                    <castItem xml:id="kettledrums">
-                        <role>Kettledrums</role>
-                    </castItem>
-                    <castItem xml:id="drums">
-                        <role>Drums</role>
-                    </castItem>
-                    <castItem xml:id="officers">
-                        <role>Officers</role>
-                    </castItem>
-                    <castItem xml:id="norw_soldiers">
-                        <role>Norwegian soldiers</role>
-                    </castItem>
-                </castList>
-            </div>
-        </front>
-        <body>
-            <div type="acto" n="1">
-                <div type="escena" n="3">
-                    <head>
-                        <supplied>1.3</supplied>
-                    </head>
-                    <stage xml:lang="eng" xml:id="g4n2k7m9q1_eng" corresp="#g4n2k7m9q1_spa">Enter Laertes, and Ophelia 
-                    <app>
-                    <lem>his sister.</lem>
+              <sp who="#ophelia" xml:lang="eng" xml:id="p7c3l9x2e5_eng" corresp="#p7c3l9x2e5_spa">
+                <speaker>Ophelia</speaker>
+                <l>Brother, to this I have lent attentive care,</l>
+                <l>And doubt not but to keepe my honour firme,</l>
+                <l>But my deere brother,do not you</l>
+                <l>Like to a cunning Sophifter,</l>
+                <l>Teach me the path and ready way to heauen,</l>
+                <l>While you forgetting what is faid to me,</l>
+                <l>Your felfe, like to a carelcfTe libertine</l>
+                <l>Doth giue'his heart, his appetite atful,</l>
+                <l>A nd little recks how that his honour dies.</l> 
+              </sp>
+              <sp who="#laertes" xml:lang="eng" xml:id="p7c3l9x2e6_eng" corresp="#p7c3l9x2e6_spa">
+                <speaker>Laertes</speaker>
+                <l>No, feare it not my deere Ofelia,</l>
+                <l>Here comes my father, occasion smiles upon a second leave.</l>
+              </sp>
+            </rdg>
+          </app>
+          
+          <app xml:id="u3k_1b4_ghc">
+            <lem wit="#F1 #Q2">
+              <sp xml:id="itf_2b4_ghc_eng" corresp="#itf_2b4_ghc_spa" prev="#p7c3l9x2e8_eng" xml:lang="eng">
+                <l>And sister, as the winds give benefit</l>
+                <l>And convey, 
+                  <app>
+                    <lem wit="#Q2">in</lem>
+                    <rdg wit="#F1" >is</rdg>
+                  </app>   
+                  assistant, do not sleep</l>
+                <l>But let me hear from you.</l>
+              </sp>
+              
+              <sp who="#ophelia" xml:lang="eng" xml:id="m8v4j1z6r3_eng" corresp="#m8v4j1z6r3_spa">
+                <speaker>Ophelia</speaker>
+                <l>Do you doubt that?</l>
+              </sp>
+              
+              <sp who="#laertes" xml:lang="eng" xml:id="s2f9d5h3k8_eng" corresp="#s2f9d5h3k8_spa">
+                <speaker>Laertes</speaker>
+                <l>For Hamlet, and the trifling of his 
+                  <app>
+                    <lem wit="#Q2">favor</lem>
+                    <rdg wit="#F1" >favours</rdg>
+                  </app>
+                  ,</l>
+                <l>Hold it a fashion and a toy in blood,</l>
+                <l>A violet in the youth of primy nature,</l>
+                <l>Forward, not permanent, sweet, not lasting,</l>
+                <l>The
+                  <app>
+                    <lem wit="#Q2">perfume and</lem> 
                     <rdg wit="#F1" type="variation-absent"></rdg>
-                    </app>
-                    </stage>
-                    <stage xml:lang="spa" xml:id="g4n2k7m9q1_spa" corresp="#g4n2k7m9q1_eng">[Entra Laertes y su hermana Ofelia]</stage>
+                  </app>
+                  suppliance of a minute,</l>
+                <l>No more.</l>
+              </sp>
+              
+              <sp who="#ophelia" xml:lang="eng" xml:id="q5k8m2z9v4_eng" corresp="#q5k8m2z9v4_spa">
+                <speaker>Ophelia</speaker>
+                <l>No more but so
+                  <app>
+                    <lem wit="#Q2">?</lem>
+                    <rdg wit="#F1" type="variation-orthography">.</rdg>
+                  </app>
+                </l>
+              </sp>
+              
+              
+              <sp who="#laertes" xml:lang="eng" xml:id="h3d7s1c9b2_eng" corresp="#h3d7s1c9b2_spa">
+                <speaker>Laertes</speaker>
+                <l>Think it no more.</l>
+                <l>For nature crescent does not grow alone</l>
+                <l>In thews and
+                  <app>
+                    <lem wit="#Q2">bulks</lem>
+                    <rdg wit="#F1" >Bulke</rdg>
+                  </app>    
+                  , but as this temple waxes</l>
+                <l>The inward service of the mind and soul</l>
+                <l>Grows wide withal. Perhaps he loves you now,</l>
+                <l>And now no soil nor cautel doth 
+                  <app>
+                    <lem wit="#Q2">besmirch</lem>
+                    <rdg wit="#F1">besmereh</rdg>
+                  </app></l>
+                <l>The virtue of his 
+                  <app>
+                    <lem wit="#Q2">will</lem>
+                    <rdg wit="#F1">feare</rdg>
+                  </app>
+                  ; but you must fear,</l>
+                <l>His greatness weighed, his will is not his own.
+                  <app>
+                    <lem n="."></lem>
+                    <rdg wit="#F1" type="variation-present">For hee himselfe is subieet to his Birth:</rdg>
+                  </app>
+                </l>
+              </sp>
+              
+              <sp who="#laertes" xml:lang="eng" xml:id="r9t3b6k2m8_eng" corresp="#r9t3b6k2m8_spa">
+                <speaker>Laertes</speaker>
+                <l>He may not, as unvalued persons do,</l>
+                <l>Carve for himself, for on his choice depends</l>
+                <l>The 
+                  <app>
+                    <lem wit="#Q2">safety</lem>
+                    <rdg wit="#F1">sanetity</rdg>
+                  </app> 
+                  and health of this whole state,</l>
+                <l>And therefore must his choice be circumscribed</l>
+                <l>Unto the voice and yielding of that body</l>
+                <l>Whereof he is the head. Then if he says he loves you,</l>
+                <l>It fits your wisdom so far to believe it</l>
+                <l>As he in his particular 
+                  <app>
+                    <lem wit="#Q2">act and place</lem>
+                    <rdg wit="#F1">Seet and foree</rdg>
+                  </app></l>
+                <l>May give his saying deed, which is no further</l>
+                <l>Than the main voice of Denmark goes withal.</l>
+              </sp>
+              
+              
+              <sp who="#laertes" xml:lang="eng" xml:id="k4v9d2m7x3_eng" corresp="#k4v9d2m7x3_spa">
+                <speaker>Laertes</speaker>
+                <l>Then weigh what loss your honor may sustain</l>
+                <l>If with too credent ear you list his songs,</l>
+                <l>Or 
+                  <app>
+                    <lem wit="#Q2">loose</lem>
+                    <rdg wit="#F1" >lose</rdg>
+                  </app>     
+                  your heart, or your chaste treasure open</l>
+                <l>To his unmastered importunity.</l>
+                <l>Fear it, Ophelia, fear it, my dear sister,</l>
+                <l>And keep 
+                  <app>
+                    <lem wit="#Q2">you in the rear</lem>
+                    <rdg wit="#F1">within the reare</rdg>
+                  </app> 
+                  of your affection,</l>
+                <l>Out of the shot and danger of desire.</l>
+              </sp>
+              
+              
+              <sp who="#laertes" xml:lang="eng" xml:id="b7n5q3x8r4_eng" corresp="#b7n5q3x8r4_spa">
+                <speaker>Laertes</speaker>
+                <l>The chariest maid is prodigal enough</l>
+                <l>If she unmask her beauty to the moon.</l>
+                <l>Virtue itself scapes not calumnious strokes.</l>
+                <l>The canker galls the infants of the spring</l>
+                <l>Too oft before 
+                  <app>
+                    <lem wit="#Q2">their</lem>
+                    <rdg wit="#F1">the</rdg>
+                  </app> 
+                  buttons be disclosed,</l>
+                <l>And in the morn and liquid dew of youth</l>
+                <l>Contagious blastments are most imminent.</l>
+                <l>Be wary, then; best safety lies in fear.</l>
+                <l>Youth to itself rebels, though none else near.</l>
+              </sp>
+              
+              <sp who="#ophelia" xml:lang="eng" xml:id="z3m8f2k9h6_eng" corresp="#z3m8f2k9h6_spa">
+                <speaker>Ophelia</speaker>
+                <l>I shall the effect of this good lesson keep</l>
+                <l>As watchman to my heart. But, good my brother,</l>
+                <l>Do not, as some ungracious pastors do,</l>
+                <l>Show me the steep and thorny way to heaven</l>
+                <l>
+                  <app>
+                    <lem wit="#Q2">Whiles</lem>
+                    <rdg wit="#F1">whilst</rdg>
+                  </app>, 
+                  a puffed and reckless libertine,</l>
+                <l>Himself the primrose path of dalliance treads,</l>
+                <l>And recks not his own rede.</l>
+              </sp>
+              <stage xml:lang="eng" xml:id="n6r4k2m7v3_eng" corresp="#n6r4k2m7v3_spa">
+                  <app>
+                    <lem wit="#Q2">[Enter Polonius.]</lem>
+                    <rdg wit="#F1" type="variation-absent"></rdg>
+                  </app>
+              </stage>
+              <sp who="#laertes" xml:lang="eng" xml:id="c7m2v9x4p1_eng" corresp="#c7m2v9x4p1_spa">
+                <speaker>Laertes</speaker>
+                <l>Oh, fear me not.</l>
+                  <app>
+                    <lem n="."></lem>
+                    <rdg wit="#F1" type="variation-present">[Enter Polonius]</rdg>
+                  </app>
+                <l>I stay too long. But here my father comes.</l>
+                <l>A double blessing is a double grace;</l>
+                <l>Occasion smiles upon a second leave.</l>
+              </sp>
+            </lem>
+            <rdg wit="#Q1" type="variation-absent"></rdg>
+            <rdg wit="#Q1" type="variation-present">[Enter Corambis]</rdg>
+          </app>
 
-                    <sp who="#laertes" xml:lang="eng" xml:id="p7c3l9x2e8_eng" corresp="#p7c3l9x2e8_spa">
-                        <speaker>Laertes</speaker>
-                        <l>My necessaries are inbarked. Farewell.</l>
-                        <l>And sister, as the winds give benefit</l>
-                        <l>And convey is assistant, do not sleep</l>
-                        <l>But let me hear from you.</l>
-                    </sp>
-                    <sp who="#laertes" xml:lang="spa" xml:id="p7c3l9x2e8_spa" corresp="#p7c3l9x2e8_eng">
-                        <speaker>Laertes</speaker>
-                        <l>Mis pertenencias están a bordo. Hasta pronto.</l>
-                        <l>Y hermana, mientras el viento sea bueno</l>
-                        <l>Y nos otroge su ayuda, no duermas</l>
-                        <l>Mas déjame saber de ti.</l>
-                    </sp>
+          
+            <sp who="#polonius" xml:lang="eng" xml:id="j5q8k2n6r4_eng" corresp="#j5q8k2n6r4_spa">
+            <speaker>Polonius</speaker>
+            <l>Yet here, Laertes? Aboard, aboard, for shame!</l>
+            <l>The wind sits in the shoulder of your sail,</l>
+            <l>And you are stayed for. There, my blessing with 
+              <app>
+                <lem wit="#Q2 #Q1">thee,</lem>
+                <rdg wit="#F1">you,</rdg>
+              </app>
+              </l>
+            <l>And these few precepts in thy memory</l>
+          <app xml:id="ghm_520_ghc">
+            <lem wit="#F1 #Q2">
+              <app>
+                <lem wit="#Q2">Look</lem>
+                <rdg wit="#F1">See</rdg>
+              </app> 
+            <l>thou character. Give thy thoughts no tongue,</l>
+            <l>Nor any unproportioned thought his act.</l>
+            </lem>
+            <rdg wit="#Q1" type="variation-absent"></rdg>
+          </app>
+          </sp>
+          
+          <app>
+            <lem wit="#Q2 #F1">
+          <sp who="#polonius" xml:lang="eng" xml:id="v6b3p9m2x8_eng" corresp="#v6b3p9m2x8_spa">
+            <speaker>Polonius</speaker>  
+            <l></l>
+            </sp> 
+            </lem>
+            <rdg wit="#Q1"><sp who="#corambis" xml:lang="eng" xml:id="v6b3p9n2x8_eng" corresp="#v6b3p9n2x8_spa">
+            <speaker>Corambis</speaker> 
+            <l></l> 
+            </sp></rdg>
+          </app>
+            <l>Be thou familiar, but by no means vulgar.</l>
+            <l>
+              <app>
+                <lem wit="#Q2 #Q1">Those</lem>
+                <rdg wit="#F1">The</rdg>
+              </app> friends thou hast, and their adoption tried,</l>
+            <l>Grapple them 
+              <app>
+                <lem wit="#Q2">unto</lem>
+                <rdg wit="#F1 #Q1">to</rdg>
+              </app> 
+              <app>
+                <lem wit="#Q2 #F1">thy</lem>
+                <rdg wit="#Q1">thee</rdg>
+              </app> 
+              soul with hoops of steel,</l>
+            <l>But do not dull 
+              <app>
+                <lem wit="#Q2 #F1">thy palm with entertainment</lem>
+                <rdg wit="#Q1">thepal with entertaine</rdg>
+              </app> 
+            </l>
+            <l>Of 
+              <app>
+                <lem wit="#Q2 #F1">each </lem>
+                <rdg wit="#Q1">every</rdg>
+              </app>
+              <app>
+                <lem wit="#Q2">new-hatched,</lem>
+                <rdg wit="#F1">unhatch't,</rdg>
+                <rdg wit="#Q1" type="variation-absent"></rdg>
+              </app>
+              unfledged courage. Beware</l>
+            <l>Of entrance
+               <app>
+                <lem wit="#Q2 #F1">to</lem>
+                <rdg wit="#Q1">into</rdg>
+              </app> 
+              a quarrel, but, being in,</l>
+            <l>Bear't that th'opposèd may beware of thee.</l>
+            <app xml:id="ghm_340_ghc">
+            <lem wit="#F1 #Q2">
+            <l>Give every man 
+              <app>
+                <lem wit="#Q2">thy</lem>
+                <rdg wit="#F1">thine</rdg>
+              </app> 
+              ear, but few thy voice.</l>
+            <l>Take each man's censure, but reserve thy judgment.</l>
+            </lem>
+            <rdg wit="#Q1" type="variation-absent"></rdg>
+            </app>
+          
+            <app>
+            <lem wit="#Q2 #F1">
+            <sp who="#polonius" xml:lang="eng" xml:id="x9k1c3m7v5_eng" corresp="#x9k1c3m7v5_spa">
+            <speaker>Polonius</speaker>
+            <l></l>
+            </sp> 
+            </lem>
+            <rdg wit="#Q1"><sp who="#corambis" xml:lang="eng" xml:id="v6l3p9n2x8_eng" corresp="#v6l3p9n2x8_spa">
+            <speaker>Corambis</speaker> 
+            <l></l> 
+            </sp></rdg>
+            </app>
+            <l>Costly thy
+              <app>
+                <lem wit="#Q2 F1">habit,</lem>
+                <rdg wit="#Q1">apparrell</rdg>
+              </app> 
+              as thy purse can buy,</l>
+            <l>But not expressed in 
+              <app>
+                <lem wit="#Q2 F1">fancy—rich, not gaudy,</lem>
+                <rdg wit="#Q1">fashion</rdg>
+              </app>
+            </l>
+            <l>For the apparel oft proclaims the man,</l>
+            <l>And they 
+               <app>
+                <lem wit="#Q2 F1">in</lem>
+                <rdg wit="#Q1">of</rdg>
+              </app>
+              France of the 
+               <app>
+                <lem wit="#Q2 F1">best</lem>
+                <rdg wit="#Q1">chiefe</rdg>
+              </app>
+              rank and station</l>
+            <l>Are of a most select and 
+               <app>
+                <lem wit="#Q2 F1">generous,</lem>
+                <rdg wit="#Q1">generall</rdg>
+              </app>
+               chief in that.</l>
+           <app xml:id="glm_520_ghc">
+            <lem wit="#F1 #Q2">
+            <l>Neither a borrower nor a lender, 
+              <app>
+                <lem wit="#Q2">boy</lem>
+                <rdg wit="#F1">be</rdg>
+              </app>
+              ,</l>
+            <l>For 
+              <app>
+                <lem wit="#Q2">love</lem>
+                <rdg wit="#F1">lone</rdg>
+              </app> 
+              oft loses both itself and friend,</l>
+            <l>And borrowing dulleth edge of husbandry.</l>
+            </lem>
+            <rdg wit="#Q1" type="variation-absent"></rdg>
+            </app>
+          
+          <app>
+            <lem wit="#Q2 #F1">
+            <sp who="#polonius" xml:lang="eng" xml:id="t2r8m9k6b3_eng" corresp="#t2r8m9k6b3_spa">
+            <speaker>Polonius</speaker>
+            <l></l>
+            </sp> 
+            </lem>
+            <rdg wit="#Q1"><sp who="#corambis" xml:lang="eng" xml:id="v4l3p9n2x8_eng" corresp="#v4l3p9n2x8_spa">
+            <speaker>Corambis</speaker> 
+            <l></l> 
+            </sp></rdg>
+            </app>
+            <l>This above all
+              <app>
+                <lem wit="#Q2">:</lem>
+                <rdg wit="#F1" type="variation-orthography">;</rdg>
+              </app> </l>
+          <app xml:id="gxm_520_ghc">
+            <lem wit="#F1 #Q2">
+            <l> to thine own self be true,</l>
+            <l>And it must follow as the night the day</l>
+            </lem>
+            <rdg wit="#Q1" type="variation-inversion">
+            <l>And it must follow as the night the day</l>
+            <l> to thine own self be true,</l>
+            </rdg>
+          </app>
+            <l>Thou canst not then be false to any 
+              <app>
+                <lem wit="#Q2 F1">man.</lem>
+                <rdg wit="#Q1">one,</rdg>
+              </app>
+              </l>
+            <l>Farewell. My blessing
+              <app>
+                <lem wit="#Q2 F1">season this in thee!</lem>
+                <rdg wit="#Q1">with thee.</rdg>
+              </app>
+              </l>
+          
+          
+          <app xml:id="gam_520_ghc">
+            <lem wit="#F1 #Q2">
+          <sp who="#laertes" xml:lang="eng" xml:id="l9f4q2m7x5_eng" corresp="#l9f4q2m7x5_spa">
+            <speaker>Laertes</speaker>
+            <l>Most humbly do I take my leave, my lord.</l>
+          </sp>
+        
+          <sp who="#polonius" xml:lang="eng" xml:id="r8n6k4v3p2_eng" corresp="#r8n6k4v3p2_spa">
+            <speaker>Polonius</speaker>
+            <l>The time invests you. Go
+              <app>
+                <lem wit="#Q2">.</lem>
+                <rdg wit="#F1" type="variation-orthography">,</rdg>
+              </app> 
+              Your servants tend.</l>
+          </sp>
+          </lem>
+            <rdg wit="#Q1" type="variation-absent"></rdg>
+        </app>
+          
+          
+          <sp who="#laertes" xml:lang="eng" xml:id="f3v7b2m9k1_eng" corresp="#f3v7b2m9k1_spa">
+            <speaker>Laertes</speaker>
+            <l>
+              <app>
+                <lem wit="#Q2 F1">Farewell, Ophelia, and remember well</lem>
+                <rdg wit="#Q1">I humbly take my leave, farewell Ofelia,</rdg>
+              </app>
+            </l>
+            <app>
+                <lem n="Ofelia,"></lem>
+                <rdg wit="#Q1" type="variation-present">And rember well</rdg>
+              </app>
+            <l>What I have said to you.</l>
+          </sp>
+          
+          
+          <sp who="#ophelia" xml:lang="eng" xml:id="m2x9k3v7b5_eng" corresp="#m2x9k3v7b5_spa">
+            <speaker>Ophelia</speaker>
+            <l>
+              <app>
+                <lem wit="#Q2 F1">'Tis in my memory locked,</lem>
+                <rdg wit="#Q1">It is already lock't within my hart,</rdg>
+              </app>
+            </l>
+            <l>And you yourself shall keep the key of it.</l>
+          </sp>
+          
+          <app>
+          <lem>
+          <sp who="#laertes" xml:lang="eng" xml:id="q4k6m9b2x7_eng" corresp="#q4k6m9b2x7_spa">
+            <speaker>Laertes</speaker>
+            <l>Farewell.</l>
+          </sp>
+          </lem>
+          <rdg wit="#Q1" type="variation-absent"></rdg>
+          </app>
+          
+          
+          <stage xml:lang="eng" xml:id="k7r2m4b9x3_eng" corresp="#k7r2m4b9x3_spa">[Exit Laertes.]</stage>
+          <stage xml:lang="spa" xml:id="k7r2m4b9x3_spa" corresp="#k7r2m4b9x3_eng">[Sale Laertes]</stage>
+          <app>
+            <lem wit="#Q2 #F1">
+            <sp who="#polonius" xml:lang="eng" xml:id="d8m3v9k1r5_eng" corresp="#d8m3v9k1r5_spa">
+            <speaker>Polonius</speaker>
+            <l></l>
+            </sp> 
+            </lem>
+            <rdg wit="#Q1"><sp who="#corambis" xml:lang="eng" xml:id="v4l3p9d2x8_eng" corresp="#v4l3p9d2x8_spa">
+            <speaker>Corambis</speaker> 
+            <l></l> 
+            </sp></rdg>
+            </app>
+            <l>What is't, Ophelia, he hath said to you?</l>
+          
+          
+          <sp who="#ophelia" xml:lang="eng" xml:id="k3v7x9m2b4_eng" corresp="#k3v7x9m2b4_spa">
+            <speaker>Ophelia</speaker>
+            <l><app>
+                <lem wit="#Q2 F1">So please you,</lem>
+                <rdg wit="#Q1" type="variation-absent"></rdg>
+              </app>
+              something touching the 
+              <app>
+                <lem wit="#Q2 F1">Lord</lem>
+                <rdg wit="#Q1">prince</rdg>
+              </app>
+              Hamlet.</l>
+          </sp>
+          
+           <app>
+            <lem wit="#Q2 #F1">
+          <sp who="#polonius" xml:lang="eng" xml:id="n9b2m5k7x3_eng" corresp="#n9b2m5k7x3_spa">
+            <speaker>Polonius</speaker>
+            <l></l>
+            </sp> 
+            </lem>
+            <rdg wit="#Q1"><sp who="#corambis" xml:lang="eng" xml:id="v4l5p9d2x8_eng" corresp="#v4l5p9d2x8_spa">
+            <speaker>Corambis</speaker> 
+            <l></l> 
+            </sp></rdg>
+            </app> 
+            
+            <app>
+            <lem wit="#Q2 F1">
+            <l>Marry, well bethougt</l>
+            <l>'Tis told me he hath very oft of late</l>
+            <l>Given private time to you, and you yourself</l>
+            <l>Have of your audience been most free and bounteous.</l>
+            <l>If it be so—as so 'tis put on me,</l>
+            <l>And that in way of caution—I must tell you</l>
+            <l>You do not understand yourself so clearly</l>
+            <l>As it behooves my daughter and your honor.</l>
+            <l>What is between you? Give me up the truth.</l></lem>
+            <rdg wit="#Q1" type="variation-absent"></rdg>
+            </app>
+            <app>
+              <lem n="truth"></lem>
+              <rdg wit="#Q1" type="variation-present">
+            <l>Mary wel thought on, t'is given me to understand,</l>
+            <l>That you have bin too prodigall of your maiden precence</l>
+            <l>Unto Prince Hamlet, if it be so,</l>
+            <l>As so tis given to mee, and that in waie of caution</l>
+            <l>I must tell you; you do not understand your selfe</l>
+            <l>So well as befits my honor, and your credite.</l>
+            </rdg>
+            </app>
+          
+          <sp who="#ophelia" xml:lang="eng" xml:id="h2m7k4v9x3_eng" corresp="#h2m7k4v9x3_spa">
+            <speaker>Ophelia</speaker>
+            <l></l>
+            <app>
+            <lem wit="#Q2 F1">
+            <l>He hath, my lord, of late made many tenders</l>
+            <l>Of his affection to me.</l>
+            </lem>
+            <rdg wit="#Q1" type="variation-absent"></rdg>
+            </app>
+            <app>
+            <lem n="Ophelia"></lem>
+            <rdg wit="#Q1" type="variation-present">
+            <l>My lord, he hath made many tenders of his love</l>
+            <l>to me.</l>
+            </rdg>
+            </app>
+          </sp>
+          <app xml:id="u3k_1b7_ghc">
+            <lem wit="#F1 #Q2">
+          
+            <sp who="#polonius" xml:lang="eng" xml:id="x7b3k9m2r4_eng" corresp="#x7b3k9m2r4_spa">
+            <speaker>Polonius</speaker>
+            <l>Affection? Pooh, you speak like a green girl,</l>
+            <l>Unsifted in such perilous circumstance.</l>
+            <l>Do you believe his "tenders," as you call them?</l>
+           </sp>
+          
+          <sp who="#ophelia" xml:lang="eng" xml:id="m8k1v3x9r2_eng" corresp="#m8k1v3x9r2_spa">
+            <speaker>Ophelia</speaker>
+            <l>I do not know, my lord, what I should think.</l>
+          </sp>
+          
+          <sp who="#polonius" xml:lang="eng" xml:id="r4v8k2m7x3_eng" corresp="#r4v8k2m7x3_spa">
+            <speaker>Polonius</speaker>
+            <l>Marry, I will teach you. Think yourself a baby</l>
+            <l>That you have ta'en 
+              <app>
+                <lem wit="#Q2">these</lem>
+                <rdg wit="#F1">his</rdg>
+              </app> tenders for true pay</l>
+            <l>Which are not sterling. Tender yourself more dearly,</l>
+            <l>Or—not to crack the wind of the poor phrase</l>
+            <l>
+              <app>
+                <lem wit="#Q2">Wronging</lem>
+                <rdg wit="#F1">Roaming</rdg>
+              </app> 
+              it thus—you'll tender me a fool.</l>
+          </sp>
+          
+          
+          <sp who="#ophelia" xml:lang="eng" xml:id="b6m9v2k3x7_eng" corresp="#b6m9v2k3x7_spa">
+            <speaker>Ophelia</speaker>
+            <l>My lord, he hath importuned me with love</l>
+            <l>In honorable fashion.</l>
+          </sp>
+          
+          
+          <sp who="#polonius" xml:lang="eng" xml:id="f9k7m2v4x3_eng" corresp="#f9k7m2v4x3_spa">
+            <speaker>Polonius</speaker>
+            <l>Ay, fashion you may call it. Go to, go to.</l>
+          </sp>
+          
+          
+          <sp who="#ophelia" xml:lang="eng" xml:id="k2v8x3m9r5_eng" corresp="#k2v8x3m9r5_spa">
+            <speaker>Ophelia</speaker>
+            <l>And hath given countenance to his speech,</l>
+            <l>My lord, with almost all the 
+              <app>
+                <lem wit="#Q2">holy</lem>
+                <rdg wit="#F1" type="variation-absent"></rdg>
+              </app> 
+              vows of heaven.</l>
+          </sp>
+          
+          
+          <sp who="#polonius" xml:lang="eng" xml:id="x3m7k9v2b4_eng" corresp="#x3m7k9v2b4_spa">
+            <speaker>Polonius</speaker>
+            <l>Ay, springs to catch woodcocks. I do know</l>
+            <l>When the blood burns, how prodigal the soul</l>
+            <l>
+              <app>
+                <lem wit="#Q2">Lends</lem>
+                <rdg wit="#F1">Gives</rdg>
+              </app>
+              the tongue vows. These blazes, daughter,</l>
+            <l>Giving more light than heat, extinct in both</l>
+            <l>Even in their promise as it is a-making,</l>
+            <l>You must not take for fire. From this time
+              <app>
+                <lem n="time"></lem>
+                <rdg wit="#F1" type="variation-present">Daughter</rdg>
+              </app>
+            </l>
+            <l>Be something scanter of your maiden presence.</l>
+            <l>Set your entreatments at a higher rate</l>
+            <l>Than a command to parle.</l>
+          </sp>
+          
+          
+          <sp who="#polonius" xml:lang="eng" xml:id="m9v2k4x3b7_eng" corresp="#m9v2k4x3b7_spa">
+            <speaker>Polonius</speaker>
+            <l>For Lord Hamlet,</l>
+            <l>Believe so much in him that he is young,</l>
+            <l>And with a larger tether may he walk</l>
+            <l>Than may be given you. In few, Ophelia,</l>
+            <l>Do not believe his vows, for they are brokers</l>
+            <l>Not of 
+              <app>
+                <lem wit="#Q2">that dye</lem>
+                <rdg wit="#F1">the eye</rdg>
+              </app> 
+              which their investments show,</l>
+            <l>But mere implorators of unholy suits</l>
+            <l>Breathing like sanctified and pious bonds</l>
+            <l>The better to
+              <app>
+                <lem wit="#Q2">beguide.</lem>
+                <rdg wit="#F1">beguile</rdg>
+              </app>      
+              This is for all:</l>
+            <l>I would not, in plain terms, from this time forth</l>
+            <l>Have you so slander any moment leisure</l>
+            <l>As to give words or talk with the Lord Hamlet.</l>
+            <l>Look to't, I charge you. Come your ways.</l>
+          </sp>
+          
+          
+          <sp who="#ophelia" xml:lang="eng" xml:id="v5b3k2m9x4_eng" corresp="#v5b3k2m9x4_spa">
+            <speaker>Ophelia</speaker>
+            <l>I shall obey, my lord.</l>
+          </sp>
+          
+          </lem>
+            <rdg wit="#Q1" type="variation-absent"></rdg>
+            <rdg wit="#Q1" type="variation-present">
+          <sp who="#corambis" xml:lang="eng" xml:id="d4l5p9d2x8_eng" corresp="#d4l5p9d2x8_spa">
+            <speaker>Corambis</speaker> 
+            <l>Tenders, I, I, tenders you may call them.</l>
+          </sp>
+          <sp who="#ophelia" xml:lang="eng" xml:id="m8f1v3x9r2_eng" corresp="#m8f1v3x9r2_spa">
+            <speaker>Ophelia</speaker>
+            <l>And withall, such earnest vowes.</l>
+          </sp>
+          <sp who="#corambis" xml:lang="eng" xml:id="d4a5p9d2x8_eng" corresp="#d4a5p9d2x8_spa">
+            <speaker>Corambis</speaker> 
+            <l>Springes to catch woodcocks,</l>
+            <l>What, do not I know when the blood doth burne,</l>
+            <l>How prodigall the tongue lends the heart vowes,</l>
+            <l>In briefe, be more scanter of your maiden prefence,</l>
+            <l>Or tendering thus you'l tender mee a foole.</l>
+          </sp>
 
-                    <sp who="#ophelia" xml:lang="eng" xml:id="m8v4j1z6r3_eng" corresp="#m8v4j1z6r3_spa">
-                        <speaker>Ophelia</speaker>
-                        <l>Do you doubt that?</l>
-                    </sp>
-                    <sp who="#ophelia" xml:lang="spa" xml:id="m8v4j1z6r3_spa" corresp="#m8v4j1z6r3_eng">
-                        <speaker>Ofelia</speaker>
-                        <l>¿Acaso lo dudas?</l>
-                    </sp>
+          <sp who="#ophelia" xml:lang="eng" xml:id="m8a1v3x9r2_eng" corresp="#m8a1v3x9r2_spa">
+            <speaker>Ophelia</speaker>
+            <l>I shall obay my lord in all I may.</l>
+          </sp>
+           <sp who="#corambis" xml:lang="eng" xml:id="d4a5p7d2x8_eng" corresp="#d4a5p7d2x8_spa">
+            <speaker>Corambis</speaker> 
+            <l>Ofelia, receive none of his letters,</l>
+            <l>for lovers lines are shares to intrap the heart;</l>
+            <l>Refuse his tokens, both of them are keyes</l>
+            <l>To unlocke Chastitie unto Defire;</l>
+            <l>Come in Ofelia, such men often prove,</l>
+            <l>Great in their wordes, but little in their love.</l>
+          </sp>
 
-                    <sp who="#laertes" xml:lang="eng" xml:id="s2f9d5h3k8_eng" corresp="#s2f9d5h3k8_spa">
-                        <speaker>Laertes</speaker>
-                        <l>For Hamlet, and the trifling of his 
-                        <app>
-                        <lem>favor</lem>
-                        <rdg wit="#F1" >favours</rdg>
-                        </app>
-                        ,</l>
-                        <l>Hold it a fashion and a toy in blood,</l>
-                        <l>A violet in the youth of primy nature,</l>
-                        <l>Forward, not permanent, sweet, not lasting,</l>
-                        <l>The
-                            <app>
-                            <lem>perfume and</lem> 
-                            <rdg wit="#F1" type="variation-absent"></rdg>
-                            </app>
-                            
-                            suppliance of a minute,</l>
-                        <l>No more.</l>
-                    </sp>
-                    <sp who="#laertes" xml:lang="spa" xml:id="s2f9d5h3k8_spa" corresp="#s2f9d5h3k8_eng">
-                        <speaker>Laertes</speaker>
-                        <l>Por Hamlet, y la insignificancia de su favor,</l>
-                        <l>Tómalo como capricho e impulso carnal,</l>
-                        <l>Una violeta en la juventud de la naturaleza primaria,</l>
-                        <l>Continuo, no permanente, dulce, no duradero,</l>
-                        <l>El perfume y el placer efímero,</l>
-                        <l>Nada más.</l>
-                    </sp>
-
-                    <sp who="#ophelia" xml:lang="eng" xml:id="q5k8m2z9v4_eng" corresp="#q5k8m2z9v4_spa">
-                        <speaker>Ophelia</speaker>
-                        <l>No more but so
-                        <app>
-                        <lem>?</lem>
-                        <rdg wit="#F1" type="variation-orthography">.</rdg>
-                        </app>
-                    </l>
-                    </sp>
-                    <sp who="#ophelia" xml:lang="spa" xml:id="q5k8m2z9v4_spa" corresp="#q5k8m2z9v4_eng">
-                        <speaker>Ofelia</speaker>
-                        <l>¿Nada más y aún así?</l>
-                    </sp>
-
-                    <sp who="#laertes" xml:lang="eng" xml:id="h3d7s1c9b2_eng" corresp="#h3d7s1c9b2_spa">
-                        <speaker>Laertes</speaker>
-                        <l>Think it no more.</l>
-                        <l>For nature crescent does not grow alone</l>
-                        <l>In thews and bulks, but as this temple waxes</l>
-                        <l>The inward service of the mind and soul</l>
-                        <l>Grows wide withal. Perhaps he loves you now,</l>
-                        <l>And now no soil nor cautel doth 
-                        <app>
-                        <lem>besmirch</lem>
-                        <rdg wit="#F1">besmereh</rdg>
-                        </app></l>
-                        <l>The virtue of his 
-                            <app>
-                            <lem>will</lem>
-                            <rdg wit="#F1">feare</rdg>
-                            </app>
-                            ; but you must fear,</l>
-                        <l>His greatness weighed, his will is not his own...
-                            <app>
-                            <lem n="..."></lem>
-                            <rdg wit="#F1" type="variation-present">For hee himselfe is subieet to his Birth:</rdg>
-                            </app></l>
-                    </sp>
-                    <sp who="#laertes" xml:lang="spa" xml:id="h3d7s1c9b2_spa" corresp="#h3d7s1c9b2_eng">
-                        <speaker>Laertes</speaker>
-                        <l>No lo pienses más.</l>
-                        <l>Pues la naturaleza, que crece en fuerza y tamaño,</l>
-                        <l>al crecer este templo, crece también</l>
-                        <l>el servicio interior de la mente y del alma.</l>
-                        <l>Quizás te ame ahora,</l>
-                        <l>y nada manche la virtud de su voluntad;</l>
-                        <l>pero debes temer:</l>
-                        <l>su grandeza medida, su querer no es suyo...</l>
-                    </sp>
-                    <sp who="#laertes" xml:lang="eng" xml:id="r9t3b6k2m8_eng" corresp="#r9t3b6k2m8_spa">
-                        <speaker>Laertes</speaker>
-                        <l>He may not, as unvalued persons do,</l>
-                        <l>Carve for himself, for on his choice depends</l>
-                        <l>The 
-                        <app>
-                        <lem>safety</lem>
-                        <rdg wit="#F1">sanetity</rdg>
-                        </app> 
-                        and health of this whole state,</l>
-                        <l>And therefore must his choice be circumscribed</l>
-                        <l>Unto the voice and yielding of that body</l>
-                        <l>Whereof he is the head. Then if he says he loves you,</l>
-                        <l>It fits your wisdom so far to believe it</l>
-                        <l>As he in his particular 
-                            <app>
-                            <lem>act and place</lem>
-                            <rdg wit="#F1">Seet and foree</rdg>
-                            </app></l>
-                        <l>May give his saying deed, which is no further</l>
-                        <l>Than the main voice of Denmark goes withal.</l>
-                    </sp>
-                    <sp who="#laertes" xml:lang="spa" xml:id="r9t3b6k2m8_spa" corresp="#r9t3b6k2m8_eng">
-                        <speaker>Laertes</speaker>
-                        <l>No puede, como los hombres sin rango,</l>
-                        <l>forjarse su propio destino, pues de su elección</l>
-                        <l>depende la salud y seguridad de todo el estado;</l>
-                        <l>y por eso su querer debe limitarse</l>
-                        <l>a la voz y al consentimiento de aquel cuerpo</l>
-                        <l>cuyo jefe es. Si entonces dice amarte,</l>
-                        <l>conviene a tu prudencia creerlo</l>
-                        <l>solo hasta donde sus actos lo confirmen,</l>
-                        <l>y eso no más allá de lo que el pueblo de Dinamarca apruebe.</l>
-                    </sp>
-
-                    <sp who="#laertes" xml:lang="eng" xml:id="k4v9d2m7x3_eng" corresp="#k4v9d2m7x3_spa">
-                        <speaker>Laertes</speaker>
-                        <l>Then weigh what loss your honor may sustain</l>
-                        <l>If with too credent ear you list his songs,</l>
-                        <l>Or lose your heart, or your chaste treasure open</l>
-                        <l>To his unmastered importunity.</l>
-                        <l>Fear it, Ophelia, fear it, my dear sister,</l>
-                        <l>And keep 
-                            <app>
-                            <lem>you in the rear</lem>
-                            <rdg wit="#F1">within the reare</rdg>
-                            </app> 
-                            of your affection,</l>
-                        <l>Out of the shot and danger of desire.</l>
-                    </sp>
-                    <sp who="#laertes" xml:lang="spa" xml:id="k4v9d2m7x3_spa" corresp="#k4v9d2m7x3_eng">
-                        <speaker>Laertes</speaker>
-                        <l>Piensa, entonces, qué pérdida sufriría tu honor</l>
-                        <l>si con oído crédulo escuchas sus cantos,</l>
-                        <l>si pierdes tu corazón, o tu tesoro casto abres</l>
-                        <l>a su importunidad indómita.</l>
-                        <l>Teme, Ofelia, teme, mi querida hermana,</l>
-                        <l>y mantén a raya tu afecto,</l>
-                        <l>fuera del alcance y peligro del deseo.</l>
-                    </sp>
-
-                    <sp who="#laertes" xml:lang="eng" xml:id="b7n5q3x8r4_eng" corresp="#b7n5q3x8r4_spa">
-                        <speaker>Laertes</speaker>
-                        <l>The chariest maid is prodigal enough</l>
-                        <l>If she unmask her beauty to the moon.</l>
-                        <l>Virtue itself scapes not calumnious strokes.</l>
-                        <l>The canker galls the infants of the spring</l>
-                        <l>Too oft before 
-                            <app>
-                            <lem>their</lem>
-                            <rdg wit="#F1">the</rdg>
-                            </app> 
-                            buttons be disclosed,</l>
-                        <l>And in the morn and liquid dew of youth</l>
-                        <l>Contagious blastments are most imminent.</l>
-                        <l>Be wary, then; best safety lies in fear.</l>
-                        <l>Youth to itself rebels, though none else near.</l>
-                    </sp>
-                    <sp who="#laertes" xml:lang="spa" xml:id="b7n5q3x8r4_spa" corresp="#b7n5q3x8r4_eng">
-                        <speaker>Laertes</speaker>
-                        <l>La doncella más recatada se prodiga bastante</l>
-                        <l>si muestra su hermosura a la luna.</l>
-                        <l>Ni la virtud misma escapa a golpes de calumnia.</l>
-                        <l>El gusano hiere los brotes de la primavera</l>
-                        <l>con frecuencia antes de abrirse,</l>
-                        <l>y en la aurora húmeda de la juventud</l>
-                        <l>los aires contagiosos son más inminentes.</l>
-                        <l>Sé cauta, entonces; la mejor seguridad está en el temor.</l>
-                        <l>La juventud contra sí misma se rebela, aunque nadie más esté cerca.</l>
-                    </sp>
-
-                    <sp who="#ophelia" xml:lang="eng" xml:id="z3m8f2k9h6_eng" corresp="#z3m8f2k9h6_spa">
-                        <speaker>Ophelia</speaker>
-                        <l>I shall the effect of this good lesson keep</l>
-                        <l>As watchman to my heart. But, good my brother,</l>
-                        <l>Do not, as some ungracious pastors do,</l>
-                        <l>Show me the steep and thorny way to heaven</l>
-                        <l>
-                            <app>
-                            <lem>Whiles</lem>
-                            <rdg wit="#F1">whilst</rdg>
-                            </app>
-                            , a puffed and reckless libertine,</l>
-                        <l>Himself the primrose path of dalliance treads,</l>
-                        <l>And recks not his own rede.</l>
-                    </sp>
-                    <sp who="#ophelia" xml:lang="spa" xml:id="z3m8f2k9h6_spa" corresp="#z3m8f2k9h6_eng">
-                        <speaker>Ofelia</speaker>
-                        <l>Guardaré el efecto de esta buena lección</l>
-                        <l>como centinela de mi corazón. Pero, buen hermano,</l>
-                        <l>no hagas como algunos pastores indignos:</l>
-                        <l>muestran el camino escarpado y espinoso al cielo,</l>
-                        <l>mientras, libertinos hinchados e imprudentes,</l>
-                        <l>ellos mismos hollan el sendero florido del placer</l>
-                        <l>y no se preocupan de su propio consejo.</l>
-                    </sp>
-
-                    <stage xml:lang="eng" xml:id="n6r4k2m7v3_eng" corresp="#n6r4k2m7v3_spa">
-                        <app>
-                        <lem>[Enter Polonius.]</lem>
-                        <rdg wit="#F1" type="variation-absent"></rdg>
-                        </app>
-                    </stage>
-                    <stage xml:lang="spa" xml:id="n6r4k2m7v3_spa" corresp="#n6r4k2m7v3_eng">[Entra Polonio]</stage>
-                    <sp who="#laertes" xml:lang="eng" xml:id="c7m2v9x4p1_eng" corresp="#c7m2v9x4p1_spa">
-                        <speaker>Laertes</speaker>
-                        <l>Oh, fear me not.</l>
-                        <app>
-                        <lem n="."></lem>
-                        <rdg wit="#F1" type="variation-present">[Enter Polonius]</rdg>
-                        </app>
-                        <l>I stay too long. But here my father comes.</l>
-                        <l>A double blessing is a double grace;</l>
-                        <l>Occasion smiles upon a second leave.</l>
-                    </sp>
-                    <sp who="#laertes" xml:lang="spa" xml:id="c7m2v9x4p1_spa" corresp="#c7m2v9x4p1_eng">
-                        <speaker>Laertes</speaker>
-                        <l>Oh, no temas de mí.</l>
-                        <l>Me he quedado demasiado. Aquí viene mi padre.</l>
-                        <l>Una doble bendición es doble gracia;</l>
-                        <l>la ocasión sonríe a una segunda despedida.</l>
-                    </sp>
-
-                    <sp who="#polonius" xml:lang="eng" xml:id="j5q8k2n6r4_eng" corresp="#j5q8k2n6r4_spa">
-                        <speaker>Polonius</speaker>
-                        <l>Yet here, Laertes? Aboard, aboard, for shame!</l>
-                        <l>The wind sits in the shoulder of your sail,</l>
-                        <l>And you are stayed for. There, my blessing with 
-                            <app>
-                            <lem>thee</lem>
-                            <rdg wit="#F1">you</rdg>
-                            </app>
-                            ,</l>
-                        <l>And these few precepts in thy memory</l>
-                        <l>
-                            <app>
-                            <lem>Look</lem>
-                            <rdg wit="#F1">See</rdg>
-                            </app> 
-                        thou character. Give thy thoughts no tongue,</l>
-                        <l>Nor any unproportioned thought his act.</l>
-                        <l>Be thou familiar, but by no means vulgar.</l>
-                    </sp>
-                    <sp who="#polonius" xml:lang="spa" xml:id="j5q8k2n6r4_spa" corresp="#j5q8k2n6r4_eng">
-                        <speaker>Polonio</speaker>
-                        <l>¿Todavía aquí, Laertes? ¡A bordo, a bordo, por vergüenza!</l>
-                        <l>El viento se posa en el hombro de tu vela,</l>
-                        <l>y te esperan. Aquí, mi bendición contigo,</l>
-                        <l>y estos pocos preceptos guarda en la memoria:</l>
-                        <l>Guarda carácter. No des a tus pensamientos inmediata lengua,</l>
-                        <l>ni a ideas desproporcionadas acción.</l>
-                        <l>Sé afable, pero de ningún modo vulgar.</l>
-                    </sp>
-
-                    <sp who="#polonius" xml:lang="eng" xml:id="v6b3p9m2x8_eng" corresp="#v6b3p9m2x8_spa">
-                        <speaker>Polonius</speaker>
-                        <l>
-                            <app>
-                            <lem>Those</lem>
-                            <rdg wit="#F1">The</rdg>
-                            </app> friends thou hast, and their adoption tried,</l>
-                        <l>Grapple them 
-                            <app>
-                            <lem>unto</lem>
-                            <rdg wit="#F1">to</rdg>
-                            </app> 
-                            thy soul with hoops of steel,</l>
-                        <l>But do not dull thy palm with entertainment</l>
-                        <l>Of each 
-                            <app>
-                            <lem>new-hatched</lem>
-                            <rdg wit="#F1">unhatch't</rdg>
-                            </app>
-                            , unfledged courage. Beware</l>
-                        <l>Of entrance to a quarrel, but, being in,</l>
-                        <l>Bear't that th'opposèd may beware of thee.</l>
-                        <l>Give every man 
-                            <app>
-                            <lem>thy</lem>
-                            <rdg wit="#F1">thine</rdg>
-                            </app> 
-                            ear, but few thy voice.</l>
-                        <l>Take each man's censure, but reserve thy judgment.</l>
-                    </sp>
-                    <sp who="#polonius" xml:lang="spa" xml:id="v6b3p9m2x8_spa" corresp="#v6b3p9m2x8_eng">
-                        <speaker>Polonio</speaker>
-                        <l>Esos amigos tuyos, y su lealtad probada,</l>
-                        <l>átales a tu alma con aros de acero,</l>
-                        <l>pero no desgastes tu palma recibiendo</l>
-                        <l>cada nuevo valor sin alas que nace. Guárdate</l>
-                        <l>de entrar en riñas, pero si entras,</l>
-                        <l>hazlo de manera que el contrario tema de ti.</l>
-                        <l>Presta tu oído a todos, pero tu voz a pocos.</l>
-                        <l>Toma el juicio de cada hombre, pero reserva el tuyo.</l>
-                    </sp>
-
-                    <sp who="#polonius" xml:lang="eng" xml:id="x9k1c3m7v5_eng" corresp="#x9k1c3m7v5_spa">
-                        <speaker>Polonius</speaker>
-                        <l>Costly thy habit as thy purse can buy,</l>
-                        <l>But not expressed in fancy—rich, not gaudy,</l>
-                        <l>For the apparel oft proclaims the man,</l>
-                        <l>And they in France of the best rank and station</l>
-                        <l>Are of a most select and generous, chief in that.</l>
-                        <l>Neither a borrower nor a lender, 
-                            <app>
-                            <lem>boy</lem>
-                            <rdg wit="#F1">be</rdg>
-                            </app>
-                            ,</l>
-                        <l>For 
-                            <app>
-                            <lem>love</lem>
-                            <rdg wit="#F1">lone</rdg>
-                            </app> 
-                            oft loses both itself and friend,</l>
-                        <l>And borrowing dulleth edge of husbandry.</l>
-                    </sp>
-                    <sp who="#polonius" xml:lang="spa" xml:id="x9k1c3m7v5_spa" corresp="#x9k1c3m7v5_eng">
-                        <speaker>Polonio</speaker>
-                        <l>Tu vestido, tan costoso como lo permita tu bolsa,</l>
-                        <l>mas sin mostrar fantasía: rico, no ostentoso,</l>
-                        <l>pues el hábito a menudo proclama al hombre,</l>
-                        <l>y en Francia los de más alto rango y estado</l>
-                        <l>son en esto los más selectos y generosos.</l>
-                        <l>Ni prestatario ni prestamista seas, hijo:</l>
-                        <l>pues el préstamo suele perder tanto el dinero como al amigo,</l>
-                        <l>y el pedir prestado embota el filo de la economía.</l>
-                    </sp>
-
-                    <sp who="#polonius" xml:lang="eng" xml:id="t2r8m9k6b3_eng" corresp="#t2r8m9k6b3_spa">
-                        <speaker>Polonius</speaker>
-                        <l>This above all
-                            <app>
-                            <lem>:</lem>
-                            <rdg wit="#F1" type="variation-orthography">;</rdg>
-                            </app> 
-                            to thine own self be true,</l>
-                        <l>And it must follow as the night the day</l>
-                        <l>Thou canst not then be false to any man.</l>
-                        <l>Farewell. My blessing season this in thee!</l>
-                    </sp>
-                    <sp who="#polonius" xml:lang="spa" xml:id="t2r8m9k6b3_spa" corresp="#t2r8m9k6b3_eng">
-                        <speaker>Polonio</speaker>
-                        <l>Y, por encima de todo: sé fiel a ti mismo,</l>
-                        <l>y se seguirá, como la noche al día,</l>
-                        <l>que no podrás ser falso con ningún hombre.</l>
-                        <l>Hasta pronto. ¡Que mi bendición madure en ti!</l>
-                    </sp>
-
-                    <sp who="#laertes" xml:lang="eng" xml:id="l9f4q2m7x5_eng" corresp="#l9f4q2m7x5_spa">
-                        <speaker>Laertes</speaker>
-                        <l>Most humbly do I take my leave, my lord.</l>
-                    </sp>
-                    <sp who="#laertes" xml:lang="spa" xml:id="l9f4q2m7x5_spa" corresp="#l9f4q2m7x5_eng">
-                        <speaker>Laertes</speaker>
-                        <l>Con toda humildad me despido, mi señor.</l>
-                    </sp>
-
-                    <sp who="#polonius" xml:lang="eng" xml:id="r8n6k4v3p2_eng" corresp="#r8n6k4v3p2_spa">
-                        <speaker>Polonius</speaker>
-                        <l>The time invests you. Go
-                            <app>
-                            <lem>.</lem>
-                            <rdg wit="#F1" type="variation-orthography">,</rdg>
-                            </app> 
-                            Your servants tend.</l>
-                    </sp>
-                    <sp who="#polonius" xml:lang="spa" xml:id="r8n6k4v3p2_spa" corresp="#r8n6k4v3p2_eng">
-                        <speaker>Polonio</speaker>
-                        <l>El tiempo te reclama. Ve. Te esperan tus sirvientes.</l>
-                    </sp>
-
-                    <sp who="#laertes" xml:lang="eng" xml:id="f3v7b2m9k1_eng" corresp="#f3v7b2m9k1_spa">
-                        <speaker>Laertes</speaker>
-                        <l>Farewell, Ophelia, and remember well</l>
-                        <l>What I have said to you.</l>
-                    </sp>
-                    <sp who="#laertes" xml:lang="spa" xml:id="f3v7b2m9k1_spa" corresp="#f3v7b2m9k1_eng">
-                        <speaker>Laertes</speaker>
-                        <l>Hasta pronto, Ofelia, y recuerda bien</l>
-                        <l>Aquello que te he dicho.</l>
-                    </sp>
-
-                    <sp who="#ophelia" xml:lang="eng" xml:id="m2x9k3v7b5_eng" corresp="#m2x9k3v7b5_spa">
-                        <speaker>Ophelia</speaker>
-                        <l>'Tis in my memory locked,</l>
-                        <l>And you yourself shall keep the key of it.</l>
-                    </sp>
-                    <sp who="#ophelia" xml:lang="spa" xml:id="m2x9k3v7b5_spa" corresp="#m2x9k3v7b5_eng">
-                        <speaker>Ofelia</speaker>
-                        <l>Esta es mi memoria sellada,</l>
-                        <l>Y tú mismo has de poseer su llave.</l>
-                    </sp>
-
-                    <sp who="#laertes" xml:lang="eng" xml:id="q4k6m9b2x7_eng" corresp="#q4k6m9b2x7_spa">
-                        <speaker>Laertes</speaker>
-                        <l>Farewell.</l>
-                    </sp>
-                    <sp who="#laertes" xml:lang="spa" xml:id="q4k6m9b2x7_spa" corresp="#q4k6m9b2x7_eng">
-                        <speaker>Laertes</speaker>
-                        <l>Hasta pronto.</l>
-                    </sp>
-
-                    <stage xml:lang="eng" xml:id="k7r2m4b9x3_eng" corresp="#k7r2m4b9x3_spa">[Exit Laertes.]</stage>
-                    <stage xml:lang="spa" xml:id="k7r2m4b9x3_spa" corresp="#k7r2m4b9x3_eng">[Sale Laertes]</stage>
-                    <sp who="#polonius" xml:lang="eng" xml:id="d8m3v9k1r5_eng" corresp="#d8m3v9k1r5_spa">
-                        <speaker>Polonius</speaker>
-                        <l>What is't, Ophelia, he hath said to you?</l>
-                    </sp>
-                    <sp who="#polonius" xml:lang="spa" xml:id="d8m3v9k1r5_spa" corresp="#d8m3v9k1r5_eng">
-                        <speaker>Polonio</speaker>
-                        <l>¿Qué fue, Ofelia, lo que él te ha dicho?</l>
-                    </sp>
-
-                    <sp who="#ophelia" xml:lang="eng" xml:id="k3v7x9m2b4_eng" corresp="#k3v7x9m2b4_spa">
-                        <speaker>Ophelia</speaker>
-                        <l>So please you, something touching the Lord Hamlet.</l>
-                    </sp>
-                    <sp who="#ophelia" xml:lang="spa" xml:id="k3v7x9m2b4_spa" corresp="#k3v7x9m2b4_eng">
-                        <speaker>Ofelia</speaker>
-                        <l>A tu merced, algo referente al Señor Hamlet.</l>
-                    </sp>
-
-                    <sp who="#polonius" xml:lang="eng" xml:id="n9b2m5k7x3_eng" corresp="#n9b2m5k7x3_spa">
-                        <speaker>Polonius</speaker>
-                        <l>Marry, well bethought.</l>
-                        <l>'Tis told me he hath very oft of late</l>
-                        <l>Given private time to you, and you yourself</l>
-                        <l>Have of your audience been most free and bounteous.</l>
-                        <l>If it be so—as so 'tis put on me,</l>
-                        <l>And that in way of caution—I must tell you</l>
-                        <l>You do not understand yourself so clearly</l>
-                        <l>As it behooves my daughter and your honor.</l>
-                        <l>What is between you? Give me up the truth.</l>
-                    </sp>
-                    <sp who="#polonius" xml:lang="spa" xml:id="n9b2m5k7x3_spa" corresp="#n9b2m5k7x3_eng">
-                        <speaker>Polonio</speaker>
-                        <l>Pues, bien recordado.</l>
-                        <l>Se me ha dicho que muy a menudo, últimamente,</l>
-                        <l>te concede tiempo en privado, y que tú misma</l>
-                        <l>has sido pródiga en escucharlo.</l>
-                        <l>Si es así — lo que se me ha dicho,</l>
-                        <l>y, que a manera de precaución — te debo decir</l>
-                        <l>No te entiendes a ti misma muy claramente</l>
-                        <l>ya que esto contienda a mi hija y su honor.</l>
-                        <l>¿Qué hay entre ustedes? Cuéntame la verdad.</l>
-                    </sp>
-
-                    <sp who="#ophelia" xml:lang="eng" xml:id="h2m7k4v9x3_eng" corresp="#h2m7k4v9x3_spa">
-                        <speaker>Ophelia</speaker>
-                        <l>He hath, my lord, of late made many tenders</l>
-                        <l>Of his affection to me.</l>
-                    </sp>
-                    <sp who="#ophelia" xml:lang="spa" xml:id="h2m7k4v9x3_spa" corresp="#h2m7k4v9x3_eng">
-                        <speaker>Ofelia</speaker>
-                        <l>Él, mi señor, muchas ofrendas ha dado</l>
-                        <l>de su afecto por mí.</l>
-                    </sp>
-
-                    <sp who="#polonius" xml:lang="eng" xml:id="x7b3k9m2r4_eng" corresp="#x7b3k9m2r4_spa">
-                        <speaker>Polonius</speaker>
-                        <l>Affection? Pooh, you speak like a green girl,</l>
-                        <l>Unsifted in such perilous circumstance.</l>
-                        <l>Do you believe his "tenders," as you call them?</l>
-                    </sp>
-                    <sp who="#polonius" xml:lang="spa" xml:id="x7b3k9m2r4_spa" corresp="#x7b3k9m2r4_eng">
-                        <speaker>Polonio</speaker>
-                        <l>¿Afecto? ¡Bah! Hablas como niña verde,</l>
-                        <l>sin probar en tan peligrosas circunstancias.</l>
-                        <l>¿Crees en esas “ofrendas”, como las llamas?</l>
-                    </sp>
-
-                    <sp who="#ophelia" xml:lang="eng" xml:id="m8k1v3x9r2_eng" corresp="#m8k1v3x9r2_spa">
-                        <speaker>Ophelia</speaker>
-                        <l>I do not know, my lord, what I should think.</l>
-                    </sp>
-                    <sp who="#ophelia" xml:lang="spa" xml:id="m8k1v3x9r2_spa" corresp="#m8k1v3x9r2_eng">
-                        <speaker>Ofelia</speaker>
-                        <l>No sé, mi señor, qué es lo que he de pensar.</l>
-                    </sp>
-
-                    <sp who="#polonius" xml:lang="eng" xml:id="r4v8k2m7x3_eng" corresp="#r4v8k2m7x3_spa">
-                        <speaker>Polonius</speaker>
-                        <l>Marry, I will teach you. Think yourself a baby</l>
-                        <l>That you have ta'en 
-                            <app>
-                            <lem>these</lem>
-                            <rdg wit="#F1">his</rdg>
-                            </app> tenders for true pay</l>
-                        <l>Which are not sterling. Tender yourself more dearly,</l>
-                        <l>Or—not to crack the wind of the poor phrase</l>
-                        <l>
-                            <app>
-                            <lem>Wronging</lem>
-                            <rdg wit="#F1">Roaming</rdg>
-                            </app> 
-                            it thus—you'll tender me a fool.</l>
-                    </sp>
-                    <sp who="#polonius" xml:lang="spa" xml:id="r4v8k2m7x3_spa" corresp="#r4v8k2m7x3_eng">
-                        <speaker>Polonio</speaker>
-                        <l>Pues, te enseñaré. Piensa en ti misma como una bebé</l>
-                        <l>que ha tomado esas dádivas por pago verdadero,</l>
-                        <l>cuando no son moneda legítima. Trátate más alto,</l>
-                        <l>o —sin cambiar el ritmo de esta pobre frase—</l>
-                        <l>si fallas de esta manera — me harás tratar como un necio.</l>
-                    </sp>
-
-                    <sp who="#ophelia" xml:lang="eng" xml:id="b6m9v2k3x7_eng" corresp="#b6m9v2k3x7_spa">
-                        <speaker>Ophelia</speaker>
-                        <l>My lord, he hath importuned me with love</l>
-                        <l>In honorable fashion.</l>
-                    </sp>
-                    <sp who="#ophelia" xml:lang="spa" xml:id="b6m9v2k3x7_spa" corresp="#b6m9v2k3x7_eng">
-                        <speaker>Ofelia</speaker>
-                        <l>Mi señor, me ha importunado con amor</l>
-                        <l>en forma honorable.</l>
-                    </sp>
-
-                    <sp who="#polonius" xml:lang="eng" xml:id="f9k7m2v4x3_eng" corresp="#f9k7m2v4x3_spa">
-                        <speaker>Polonius</speaker>
-                        <l>Ay, fashion you may call it. Go to, go to.</l>
-                    </sp>
-                    <sp who="#polonius" xml:lang="spa" xml:id="f9k7m2v4x3_spa" corresp="#f9k7m2v4x3_eng">
-                        <speaker>Polonio</speaker>
-                        <l>Sí, honorable lo llamas. Anda, anda.</l>
-                    </sp>
-
-                    <sp who="#ophelia" xml:lang="eng" xml:id="k2v8x3m9r5_eng" corresp="#k2v8x3m9r5_spa">
-                        <speaker>Ophelia</speaker>
-                        <l>And hath given countenance to his speech,</l>
-                        <l>My lord, with almost all the 
-                            <app>
-                            <lem>holy</lem>
-                            <rdg wit="#F1" type="variation-absent"></rdg>
-                            </app> 
-                            vows of heaven.</l>
-                    </sp>
-                    <sp who="#ophelia" xml:lang="spa" xml:id="k2v8x3m9r5_spa" corresp="#k2v8x3m9r5_eng">
-                        <speaker>Ofelia</speaker>
-                        <l>Y ha confirmado su palabra,</l>
-                        <l>mi señor, con casi todos los santos votos del cielo.</l>
-                    </sp>
-
-                    <sp who="#polonius" xml:lang="eng" xml:id="x3m7k9v2b4_eng" corresp="#x3m7k9v2b4_spa">
-                        <speaker>Polonius</speaker>
-                        <l>Ay, springs to catch woodcocks. I do know</l>
-                        <l>When the blood burns, how prodigal the soul</l>
-                        <l>
-                            <app>
-                            <lem>Lends</lem>
-                            <rdg wit="#F1">Gives</rdg>
-                            </app>
-                            the tongue vows. These blazes, daughter,</l>
-                        <l>Giving more light than heat, extinct in both</l>
-                        <l>Even in their promise as it is a-making,</l>
-                        <l>You must not take for fire. From this time
-                            <app>
-                            <lem n="time"></lem>
-                            <rdg wit="#F1" type="variation-present">Daughter</rdg>
-                            </app>
-                        </l>
-                        <l>Be something scanter of your maiden presence.</l>
-                        <l>Set your entreatments at a higher rate</l>
-                        <l>Than a command to parle.</l>
-                    </sp>
-                    <sp who="#polonius" xml:lang="spa" xml:id="x3m7k9v2b4_spa" corresp="#x3m7k9v2b4_eng">
-                        <speaker>Polonio</speaker>
-                        <l>Sí, trampas para atrapar becadas. Sé bien cómo,</l>
-                        <l>cuando la sangre arde, cómo el alma pródiga</l>
-                        <l>presta a la lengua promesas. Esos fuegos, hija,</l>
-                        <l>dan más luz que calor; y se extinguen en ambos</l>
-                        <l>aun mientras se forman las promesas.</l>
-                        <l>No los tomes por llamas verdaderas. Desde ahora</l>
-                        <l>sé más escasa en tu presencia de damisela.</l>
-                        <l>Pon precio más alto a tus favores</l>
-                        <l>que no ceder a cualquier ruego.</l>
-                    </sp>
-
-                    <sp who="#polonius" xml:lang="eng" xml:id="m9v2k4x3b7_eng" corresp="#m9v2k4x3b7_spa">
-                        <speaker>Polonius</speaker>
-                        <l>For Lord Hamlet,</l>
-                        <l>Believe so much in him that he is young,</l>
-                        <l>And with a larger tether may he walk</l>
-                        <l>Than may be given you. In few, Ophelia,</l>
-                        <l>Do not believe his vows, for they are brokers</l>
-                        <l>Not of 
-                            <app>
-                            <lem>that dye</lem>
-                            <rdg wit="#F1">the eye</rdg>
-                            </app> 
-                            which their investments show,</l>
-                        <l>But mere implorators of unholy suits</l>
-                        <l>Breathing like sanctified and pious bonds</l>
-                        <l>The better to beguile. This is for all:</l>
-                        <l>I would not, in plain terms, from this time forth</l>
-                        <l>Have you so slander any moment leisure</l>
-                        <l>As to give words or talk with the Lord Hamlet.</l>
-                        <l>Look to't, I charge you. Come your ways.</l>
-                    </sp>
-                    <sp who="#polonius" xml:lang="spa" xml:id="m9v2k4x3b7_spa" corresp="#m9v2k4x3b7_eng">
-                        <speaker>Polonio</speaker>
-                        <l>En cuanto al príncipe Hamlet,</l>
-                        <l>cree tan solo que es joven,</l>
-                        <l>y que le es dado un lazo más ancho</l>
-                        <l>que el permitido a ti. En corto, Ofelia,</l>
-                        <l>no creas sus promesas, que son quebradizas,</l>
-                        <l>no tienen el tinte que sus esfuerzos aparentan,</l>
-                        <l>no buscan sino súplicas impuras,</l>
-                        <l>respirando como juramentos santos y devotos</l>
-                        <l>para engañar mejor. Esto va para todos:</l>
-                        <l>No dejaré, por ponerlo a secas, de ahora en adelante</l>
-                        <l>que tengas tan ligeros tus momentos de descanso</l>
-                        <l>para que hables o converses con el Señor Hamlet.</l>
-                        <l>Míralo bien, te lo ordeno. Continúa tu camino.</l>
-                    </sp>
-
-                    <sp who="#ophelia" xml:lang="eng" xml:id="v5b3k2m9x4_eng" corresp="#v5b3k2m9x4_spa">
-                        <speaker>Ophelia</speaker>
-                        <l>I shall obey, my lord.</l>
-                    </sp>
-                    <sp who="#ophelia" xml:lang="spa" xml:id="v5b3k2m9x4_spa" corresp="#v5b3k2m9x4_eng">
-                        <speaker>Ofelia</speaker>
-                        <l>He de obedecer, mi señor.</l>
-                    </sp>
-
-                    <stage xml:lang="eng" xml:id="k9x3m2v7b5_eng" corresp="#k9x3m2v7b5_spa">[Exeunt.]</stage>
-                    <stage xml:lang="spa" xml:id="k9x3m2v7b5_spa" corresp="#k9x3m2v7b5_eng">[Salen]</stage>
-                </div>
-            </div>
-        </body>
-    </text>
+          <sp who="#ophelia" xml:lang="eng" xml:id="m8a1v3x6r2_eng" corresp="#m8a1v3x6r2_spa">
+            <speaker>Ophelia</speaker>
+            <l>I will my lord.</l>
+          </sp>
+              [exeunt]
+            </rdg>
+          </app>
+          
+          <stage xml:lang="eng" xml:id="k9x3m2v7b5_eng" corresp="#k9x3m2v7b5_spa">[Exeunt.]</stage>
+          <stage xml:lang="spa" xml:id="k9x3m2v7b5_spa" corresp="#k9x3m2v7b5_eng">[Salen]</stage>
+          <stage xml:lang="spa" xml:id="g4n2k7m9q1_spa" corresp="#g4n2k7m9q1_eng">[Entra Laertes y su hermana Ofelia]</stage>
+          <sp who="#laertes" xml:lang="spa" xml:id="p7c3l9x2e8_spa" corresp="#p7c3l9x2e8_eng">
+            <speaker>Laertes</speaker>
+            <l>Mis pertenencias están a bordo. Hasta pronto.</l>
+            <l>Y hermana, mientras el viento sea bueno</l>
+            <l>Y nos otroge su ayuda, no duermas</l>
+            <l>Mas déjame saber de ti.</l>
+          </sp>
+          <sp who="#ophelia" xml:lang="spa" xml:id="m8v4j1z6r3_spa" corresp="#m8v4j1z6r3_eng">
+            <speaker>Ofelia</speaker>
+            <l>¿Acaso lo dudas?</l>
+          </sp>
+          <sp who="#laertes" xml:lang="spa" xml:id="s2f9d5h3k8_spa" corresp="#s2f9d5h3k8_eng">
+            <speaker>Laertes</speaker>
+            <l>Por Hamlet, y la insignificancia de su favor,</l>
+            <l>Tómalo como capricho e impulso carnal,</l>
+            <l>Una violeta en la juventud de la naturaleza primaria,</l>
+            <l>Continuo, no permanente, dulce, no duradero,</l>
+            <l>El perfume y el placer efímero,</l>
+            <l>Nada más.</l>
+          </sp>
+          <sp who="#ophelia" xml:lang="spa" xml:id="q5k8m2z9v4_spa" corresp="#q5k8m2z9v4_eng">
+            <speaker>Ofelia</speaker>
+            <l>¿Nada más y aún así?</l>
+          </sp>
+          <sp who="#laertes" xml:lang="spa" xml:id="h3d7s1c9b2_spa" corresp="#h3d7s1c9b2_eng">
+            <speaker>Laertes</speaker>
+            <l>No lo pienses más.</l>
+            <l>Pues la naturaleza, que crece en fuerza y tamaño,</l>
+            <l>al crecer este templo, crece también</l>
+            <l>el servicio interior de la mente y del alma.</l>
+            <l>Quizás te ame ahora,</l>
+            <l>y nada manche la virtud de su voluntad;</l>
+            <l>pero debes temer:</l>
+            <l>su grandeza medida, su querer no es suyo...</l>
+          </sp>
+          <sp who="#laertes" xml:lang="spa" xml:id="r9t3b6k2m8_spa" corresp="#r9t3b6k2m8_eng">
+            <speaker>Laertes</speaker>
+            <l>No puede, como los hombres sin rango,</l>
+            <l>forjarse su propio destino, pues de su elección</l>
+            <l>depende la salud y seguridad de todo el estado;</l>
+            <l>y por eso su querer debe limitarse</l>
+            <l>a la voz y al consentimiento de aquel cuerpo</l>
+            <l>cuyo jefe es. Si entonces dice amarte,</l>
+            <l>conviene a tu prudencia creerlo</l>
+            <l>solo hasta donde sus actos lo confirmen,</l>
+            <l>y eso no más allá de lo que el pueblo de Dinamarca apruebe.</l>
+          </sp>
+          <sp who="#laertes" xml:lang="spa" xml:id="k4v9d2m7x3_spa" corresp="#k4v9d2m7x3_eng">
+            <speaker>Laertes</speaker>
+            <l>Piensa, entonces, qué pérdida sufriría tu honor</l>
+            <l>si con oído crédulo escuchas sus cantos,</l>
+            <l>si pierdes tu corazón, o tu tesoro casto abres</l>
+            <l>a su importunidad indómita.</l>
+            <l>Teme, Ofelia, teme, mi querida hermana,</l>
+            <l>y mantén a raya tu afecto,</l>
+            <l>fuera del alcance y peligro del deseo.</l>
+          </sp>
+          <sp who="#laertes" xml:lang="spa" xml:id="b7n5q3x8r4_spa" corresp="#b7n5q3x8r4_eng">
+            <speaker>Laertes</speaker>
+            <l>La doncella más recatada se prodiga bastante</l>
+            <l>si muestra su hermosura a la luna.</l>
+            <l>Ni la virtud misma escapa a golpes de calumnia.</l>
+            <l>El gusano hiere los brotes de la primavera</l>
+            <l>con frecuencia antes de abrirse,</l>
+            <l>y en la aurora húmeda de la juventud</l>
+            <l>los aires contagiosos son más inminentes.</l>
+            <l>Sé cauta, entonces; la mejor seguridad está en el temor.</l>
+            <l>La juventud contra sí misma se rebela, aunque nadie más esté cerca.</l>
+          </sp>
+          <sp who="#ophelia" xml:lang="spa" xml:id="z3m8f2k9h6_spa" corresp="#z3m8f2k9h6_eng">
+            <speaker>Ofelia</speaker>
+            <l>Guardaré el efecto de esta buena lección</l>
+            <l>como centinela de mi corazón. Pero, buen hermano,</l>
+            <l>no hagas como algunos pastores indignos:</l>
+            <l>muestran el camino escarpado y espinoso al cielo,</l>
+            <l>mientras, libertinos hinchados e imprudentes,</l>
+            <l>ellos mismos hollan el sendero florido del placer</l>
+            <l>y no se preocupan de su propio consejo.</l>
+          </sp>
+          <stage xml:lang="spa" xml:id="n6r4k2m7v3_spa" corresp="#n6r4k2m7v3_eng">[Entra Polonio]</stage>
+          <sp who="#laertes" xml:lang="spa" xml:id="c7m2v9x4p1_spa" corresp="#c7m2v9x4p1_eng">
+            <speaker>Laertes</speaker>
+            <l>Oh, no temas de mí.</l>
+            <l>Me he quedado demasiado. Aquí viene mi padre.</l>
+            <l>Una doble bendición es doble gracia;</l>
+            <l>la ocasión sonríe a una segunda despedida.</l>
+          </sp>
+          <sp who="#polonius" xml:lang="spa" xml:id="j5q8k2n6r4_spa" corresp="#j5q8k2n6r4_eng">
+            <speaker>Polonio</speaker>
+            <l>¿Todavía aquí, Laertes? ¡A bordo, a bordo, por vergüenza!</l>
+            <l>El viento se posa en el hombro de tu vela,</l>
+            <l>y te esperan. Aquí, mi bendición contigo,</l>
+            <l>y estos pocos preceptos guarda en la memoria:</l>
+            <l>Guarda carácter. No des a tus pensamientos inmediata lengua,</l>
+            <l>ni a ideas desproporcionadas acción.</l>
+            <l>Sé afable, pero de ningún modo vulgar.</l>
+          </sp>
+          <sp who="#polonius" xml:lang="spa" xml:id="v6b3p9m2x8_spa" corresp="#v6b3p9m2x8_eng">
+            <speaker>Polonio</speaker>
+            <l>Esos amigos tuyos, y su lealtad probada,</l>
+            <l>átales a tu alma con aros de acero,</l>
+            <l>pero no desgastes tu palma recibiendo</l>
+            <l>cada nuevo valor sin alas que nace. Guárdate</l>
+            <l>de entrar en riñas, pero si entras,</l>
+            <l>hazlo de manera que el contrario tema de ti.</l>
+            <l>Presta tu oído a todos, pero tu voz a pocos.</l>
+            <l>Toma el juicio de cada hombre, pero reserva el tuyo.</l>
+          </sp>
+          <sp who="#polonius" xml:lang="spa" xml:id="x9k1c3m7v5_spa" corresp="#x9k1c3m7v5_eng">
+            <speaker>Polonio</speaker>
+            <l>Tu vestido, tan costoso como lo permita tu bolsa,</l>
+            <l>mas sin mostrar fantasía: rico, no ostentoso,</l>
+            <l>pues el hábito a menudo proclama al hombre,</l>
+            <l>y en Francia los de más alto rango y estado</l>
+            <l>son en esto los más selectos y generosos.</l>
+            <l>Ni prestatario ni prestamista seas, hijo:</l>
+            <l>pues el préstamo suele perder tanto el dinero como al amigo,</l>
+            <l>y el pedir prestado embota el filo de la economía.</l>
+          </sp>
+          <sp who="#polonius" xml:lang="spa" xml:id="t2r8m9k6b3_spa" corresp="#t2r8m9k6b3_eng">
+            <speaker>Polonio</speaker>
+            <l>Y, por encima de todo: sé fiel a ti mismo,</l>
+            <l>y se seguirá, como la noche al día,</l>
+            <l>que no podrás ser falso con ningún hombre.</l>
+            <l>Hasta pronto. ¡Que mi bendición madure en ti!</l>
+          </sp>
+          <sp who="#laertes" xml:lang="spa" xml:id="l9f4q2m7x5_spa" corresp="#l9f4q2m7x5_eng">
+            <speaker>Laertes</speaker>
+            <l>Con toda humildad me despido, mi señor.</l>
+          </sp>
+          <sp who="#polonius" xml:lang="spa" xml:id="r8n6k4v3p2_spa" corresp="#r8n6k4v3p2_eng">
+            <speaker>Polonio</speaker>
+            <l>El tiempo te reclama. Ve. Te esperan tus sirvientes.</l>
+          </sp>
+          <sp who="#laertes" xml:lang="spa" xml:id="f3v7b2m9k1_spa" corresp="#f3v7b2m9k1_eng">
+            <speaker>Laertes</speaker>
+            <l>Hasta pronto, Ofelia, y recuerda bien</l>
+            <l>Aquello que te he dicho.</l>
+          </sp>
+          <sp who="#ophelia" xml:lang="spa" xml:id="m2x9k3v7b5_spa" corresp="#m2x9k3v7b5_eng">
+            <speaker>Ofelia</speaker>
+            <l>Esta es mi memoria sellada,</l>
+            <l>Y tú mismo has de poseer su llave.</l>
+          </sp>
+          <sp who="#laertes" xml:lang="spa" xml:id="q4k6m9b2x7_spa" corresp="#q4k6m9b2x7_eng">
+            <speaker>Laertes</speaker>
+            <l>Hasta pronto.</l>
+          </sp>
+          <sp who="#polonius" xml:lang="spa" xml:id="d8m3v9k1r5_spa" corresp="#d8m3v9k1r5_eng">
+            <speaker>Polonio</speaker>
+            <l>¿Qué fue, Ofelia, lo que él te ha dicho?</l>
+          </sp>
+          <sp who="#ophelia" xml:lang="spa" xml:id="k3v7x9m2b4_spa" corresp="#k3v7x9m2b4_eng">
+            <speaker>Ofelia</speaker>
+            <l>A tu merced, algo referente al Señor Hamlet.</l>
+          </sp>
+          <sp who="#polonius" xml:lang="spa" xml:id="n9b2m5k7x3_spa" corresp="#n9b2m5k7x3_eng">
+            <speaker>Polonio</speaker>
+            <l>Pues, bien recordado.</l>
+            <l>Se me ha dicho que muy a menudo, últimamente,</l>
+            <l>te concede tiempo en privado, y que tú misma</l>
+            <l>has sido pródiga en escucharlo.</l>
+            <l>Si es así — lo que se me ha dicho,</l>
+            <l>y, que a manera de precaución — te debo decir</l>
+            <l>No te entiendes a ti misma muy claramente</l>
+            <l>ya que esto contienda a mi hija y su honor.</l>
+            <l>¿Qué hay entre ustedes? Cuéntame la verdad.</l>
+          </sp>
+          <sp who="#ophelia" xml:lang="spa" xml:id="h2m7k4v9x3_spa" corresp="#h2m7k4v9x3_eng">
+            <speaker>Ofelia</speaker>
+            <l>Él, mi señor, muchas ofrendas ha dado</l>
+            <l>de su afecto por mí.</l>
+          </sp>
+          <sp who="#polonius" xml:lang="spa" xml:id="x7b3k9m2r4_spa" corresp="#x7b3k9m2r4_eng">
+            <speaker>Polonio</speaker>
+            <l>¿Afecto? ¡Bah! Hablas como niña verde,</l>
+            <l>sin probar en tan peligrosas circunstancias.</l>
+            <l>¿Crees en esas “ofrendas”, como las llamas?</l>
+          </sp>
+          <sp who="#ophelia" xml:lang="spa" xml:id="m8k1v3x9r2_spa" corresp="#m8k1v3x9r2_eng">
+            <speaker>Ofelia</speaker>
+            <l>No sé, mi señor, qué es lo que he de pensar.</l>
+          </sp>
+          <sp who="#polonius" xml:lang="spa" xml:id="r4v8k2m7x3_spa" corresp="#r4v8k2m7x3_eng">
+            <speaker>Polonio</speaker>
+            <l>Pues, te enseñaré. Piensa en ti misma como una bebé</l>
+            <l>que ha tomado esas dádivas por pago verdadero,</l>
+            <l>cuando no son moneda legítima. Trátate más alto,</l>
+            <l>o —sin cambiar el ritmo de esta pobre frase—</l>
+            <l>si fallas de esta manera — me harás tratar como un necio.</l>
+          </sp>
+          <sp who="#ophelia" xml:lang="spa" xml:id="b6m9v2k3x7_spa" corresp="#b6m9v2k3x7_eng">
+            <speaker>Ofelia</speaker>
+            <l>Mi señor, me ha importunado con amor</l>
+            <l>en forma honorable.</l>
+          </sp>
+          <sp who="#polonius" xml:lang="spa" xml:id="f9k7m2v4x3_spa" corresp="#f9k7m2v4x3_eng">
+            <speaker>Polonio</speaker>
+            <l>Sí, honorable lo llamas. Anda, anda.</l>
+          </sp>
+          <sp who="#ophelia" xml:lang="spa" xml:id="k2v8x3m9r5_spa" corresp="#k2v8x3m9r5_eng">
+            <speaker>Ofelia</speaker>
+            <l>Y ha confirmado su palabra,</l>
+            <l>mi señor, con casi todos los santos votos del cielo.</l>
+          </sp>
+          <sp who="#polonius" xml:lang="spa" xml:id="x3m7k9v2b4_spa" corresp="#x3m7k9v2b4_eng">
+            <speaker>Polonio</speaker>
+            <l>Sí, trampas para atrapar becadas. Sé bien cómo,</l>
+            <l>cuando la sangre arde, cómo el alma pródiga</l>
+            <l>presta a la lengua promesas. Esos fuegos, hija,</l>
+            <l>dan más luz que calor; y se extinguen en ambos</l>
+            <l>aun mientras se forman las promesas.</l>
+            <l>No los tomes por llamas verdaderas. Desde ahora</l>
+            <l>sé más escasa en tu presencia de damisela.</l>
+            <l>Pon precio más alto a tus favores</l>
+            <l>que no ceder a cualquier ruego.</l>
+          </sp>
+          <sp who="#polonius" xml:lang="spa" xml:id="m9v2k4x3b7_spa" corresp="#m9v2k4x3b7_eng">
+            <speaker>Polonio</speaker>
+            <l>En cuanto al príncipe Hamlet,</l>
+            <l>cree tan solo que es joven,</l>
+            <l>y que le es dado un lazo más ancho</l>
+            <l>que el permitido a ti. En corto, Ofelia,</l>
+            <l>no creas sus promesas, que son quebradizas,</l>
+            <l>no tienen el tinte que sus esfuerzos aparentan,</l>
+            <l>no buscan sino súplicas impuras,</l>
+            <l>respirando como juramentos santos y devotos</l>
+            <l>para engañar mejor. Esto va para todos:</l>
+            <l>No dejaré, por ponerlo a secas, de ahora en adelante</l>
+            <l>que tengas tan ligeros tus momentos de descanso</l>
+            <l>para que hables o converses con el Señor Hamlet.</l>
+            <l>Míralo bien, te lo ordeno. Continúa tu camino.</l>
+          </sp>
+          <sp who="#ophelia" xml:lang="spa" xml:id="v5b3k2m9x4_spa" corresp="#v5b3k2m9x4_eng">
+            <speaker>Ofelia</speaker>
+            <l>He de obedecer, mi señor.</l>
+          </sp>
+        </div>
+      </div>
+      <div type="reflexión">
+        <head>Reflexión personal</head>
+        <p>Durante la producción de este proyecto, se utilizo la herramienta ChatGPT para corroborar si la traducción 
+          propuesta estaba acorde al ingles Isabelino. Adicionalmente, se utilizó como apoyo para descubrir diferentes formas de 
+          acomodar y decorar las distintas partes del proyecto. Su uso fue netamente educativo y permitio una profundización en el 
+          aprendizaje del uso del css
+        </p>
+      </div>
+    </body>
+  </text>
 </TEI>

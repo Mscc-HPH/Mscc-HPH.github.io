@@ -19,7 +19,19 @@ tei-l {
  display: block;
 }
 
-tei-caption{
+
+tei-div [type="reflexión"] p{
+    display: block;
+}
+
+
+tei-note { 
+    display: block;
+    font-style: italic;
+    color: darkgreen;
+}
+
+tei-caption {
     display: block;
     font-style: italic;
     text-align: center;
@@ -27,24 +39,24 @@ tei-caption{
     font-size:x-large;
 }
 
-tei-sp[lang="eng"]{
+tei-sp[lang="eng"] {
     display: block;
 }
 
-tei-sp[lang="spa"]{
+tei-sp[lang="spa"] {
     display: block;
     display: none;
 
 }
 
 
-tei-stage[lang="eng"]  {
+tei-stage[lang="eng"] {
     display: block;
     color: purple;
     font-size: larger;
 }
 
-tei-stage[lang="spa"]  {
+tei-stage[lang="spa"] {
     display: block;
     display: none;
 
@@ -54,6 +66,7 @@ tei-speaker {
     display: block;
     font-size: large;
     text-decoration: underline;
+    color: darkred;
 }
 
 tei-role {
@@ -70,3 +83,41 @@ tei-roleDesc {
 tei-castGroup {
     display: block;
 }
+
+/* --------- BASE: Q2 --------- */
+tei-lem {
+  display: inline;
+}
+
+tei-rdg {
+  display: none;
+}
+
+/* --------- MODO F1 --------- */
+/* De entrada ocultamos TODO lo que sea lem/rdg */
+body.show-f1 tei-lem,
+body.show-f1 tei-rdg {
+  display: none;
+}
+
+/* Mostramos solo lo que tenga F1 en @wit */
+body.show-f1 tei-lem[wit*="#F1"],
+body.show-f1 tei-rdg[wit*="#F1"] {
+  display: inline;
+  color: forestgreen;
+}
+
+/* --------- MODO Q1 --------- */
+/* Igual: ocultar todo lo que sea lem/rdg */
+body.show-q1 tei-lem,
+body.show-q1 tei-rdg {
+  display: none;
+}
+
+/* Y mostrar solo las lecturas donde @wit contiene #Q1 */
+body.show-q1 tei-lem[wit*="#Q1"],
+body.show-q1 tei-rdg[wit*="#Q1"] {
+  display: inline;
+  color: darkred;
+}
+

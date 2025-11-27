@@ -31,7 +31,35 @@
     c.getHTML5('1.3_Mateo_Castañeda.xml', function(data){
       document.getElementsByTagName('body')[0].appendChild(data);
     });
+    
+    document.addEventListener("keydown", function (event) {
+  const key = event.key.toLowerCase();
+
+  if (key === "f") {
+    // Si ya estamos en F1, volver a Q2 (sin clases)
+    if (document.body.classList.contains("show-f1")) {
+      document.body.classList.remove("show-f1");
+    } else {
+      // Activar F1 y desactivar Q1
+      document.body.classList.remove("show-q1");
+      document.body.classList.add("show-f1");
+    }
+  } else if (key === "q") {
+    // Si ya estamos en Q1, volver a Q2 (sin clases)
+    if (document.body.classList.contains("show-q1")) {
+      document.body.classList.remove("show-q1");
+    } else {
+      // Activar Q1 y desactivar F1
+      document.body.classList.remove("show-f1");
+      document.body.classList.add("show-q1");
+    }
+  } else if (key === "escape") {
+    // Escape siempre vuelve a la versión base Q2
+    document.body.classList.remove("show-f1", "show-q1");
+  }
+});
   </script>
+
  <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Beau+Rivage&display=swap" rel="stylesheet">
